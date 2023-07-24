@@ -4,11 +4,8 @@
   "compilerOptions": {
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
-<<<<<<< HEAD
-=======
     "strictPropertyInitialization": false,
     "strictNullChecks": false,
->>>>>>> NetFi_Portal-Shankar1307
     "sourceMap": true,
     "declaration": false,
     "downlevelIteration": true,
