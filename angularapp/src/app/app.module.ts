@@ -8,6 +8,7 @@ import { UserNavbarComponent } from './user/user-navbar/user-navbar.component';
 import { NotificationComponent } from './user/notification/notification.component';
 import { ReviewComponent } from './user/review/review.component';
 import { ShowReviewComponent } from './user/review/show-review/show-review.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -23,7 +24,9 @@ import { ShowReviewComponent } from './user/review/show-review/show-review.compo
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
