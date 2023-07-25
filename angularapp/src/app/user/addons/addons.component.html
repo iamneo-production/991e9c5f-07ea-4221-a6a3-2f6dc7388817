@@ -1,0 +1,34 @@
+<div class="search-box">
+    <input placeholder="Type here to search plans" [(ngModel)]="SearchText" name="SearchText">
+  </div>
+  
+  <div class="container" *ngFor="let plan of addonData | searchaddon: SearchText; let i=index ">
+      <div class="card card-container col-md-10 d-flex justify-content-between" [ngClass]="{'color-change': i%2!==0}">
+        <span class="badge text-bg-dark b1">{{ plan.addonType }}</span>
+        <div class="row">
+          <div class="col-md-4">
+            <b>
+              <p class="currency-rupee">{{ plan.addonPrice }} ₹</p>
+            </b>
+          </div>
+          <div class=" col-md-1 vertical-line"></div>
+          <div class="col-md-3 data-info">
+            <p>Data :</p>
+            <p>{{plan.addonDetails}} (10MBPS)</p>
+          </div>
+          <div class="col-md-3 validity-info">
+            <p>validity :</p>
+            <p>{{ plan.addonValidity }}</p>
+          </div>
+          <div class="col-md-1 d-flex justify-content-end ">
+            <span class="greater-than" (click)="redirectToRechargePage()">&gt;</span>
+          </div>
+        </div>
+        <div class="row desc">
+          <p>Data: {{plan.addonDetails}}</p>
+          <p>Speed: 10(MBPS)</p>
+          <p>Offer : 20% upto Rs.200 casback</p>
+        </div>
+      </div>
+    </div>
+  
