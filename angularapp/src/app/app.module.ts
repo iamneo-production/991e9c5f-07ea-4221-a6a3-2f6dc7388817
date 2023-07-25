@@ -10,6 +10,10 @@ import { PrepaidPlanComponent } from './admin/prepaid/prepaid-plan/prepaid-plan.
 import { AddPrepaidComponent } from './admin/prepaid/add-prepaid/add-prepaid.component';
 import { UpdatePrepaidComponent } from './admin/prepaid/update-prepaid/update-prepaid.component';
 import { AdminNavbarComponent } from './admin/admin-navbar/admin-navbar.component';
+import { AddonComponent } from './admin/addon/addon.component';
+import { AddAddonComponent } from './admin/addon/add-addon/add-addon.component';
+import { AddonPlanComponent } from './admin/addon/addon-plan/addon-plan.component';
+import { UpdateAddonComponent } from './admin/addon/update-addon/update-addon.component';
 
 
 @NgModule({
@@ -19,6 +23,10 @@ import { AdminNavbarComponent } from './admin/admin-navbar/admin-navbar.componen
     AddPrepaidComponent,
     UpdatePrepaidComponent,
     AdminNavbarComponent,
+    AddonComponent,
+    AddAddonComponent,
+    AddonPlanComponent,
+    UpdateAddonComponent,
   ],
   imports: [
     BrowserModule,
