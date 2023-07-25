@@ -1,75 +1,129 @@
 package com.examly.springapp;
 
-
+import static org.junit.Assert.assertTrue;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-//import org.junit.Test;
-import org.junit.jupiter.api.Test; 
+import java.io.File;
+
+import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.http.MediaType;
-import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
-import org.springframework.transaction.annotation.Transactional;
 
+@RunWith(SpringJUnit4ClassRunner.class) 
 @SpringBootTest(classes = SpringappApplication.class)
 @AutoConfigureMockMvc
-@RunWith(SpringRunner.class)
 class SpringappApplicationTests {
-
-	@Autowired
-    private MockMvc mockMvc;
 	
-	@Test
-	@Transactional
-    public void BE_Add_User() throws Exception {
-        String newUser = "{\"email\":\"test@gmail.com\",\"password\":\"Test@123\",\"username\":\"test123\",\"mobileNumber\":\"9876543210\",\"userRole\":\"user\"}";
-        mockMvc.perform(MockMvcRequestBuilders.post("/user/signup")
-		.contentType(MediaType.APPLICATION_JSON)
-		.content(newUser)
-		.accept(MediaType.APPLICATION_JSON))
-		.andExpect(status().isOk())
-		.andReturn();
-    }
+	 @Autowired
+	    private MockMvc mockMvc;
 
 	@Test
-	@Transactional
-    public void BE_Add_Plan() throws Exception {
-        String newPlan = "{\"planId\":\"01\",\"planType\":\"prepaid\",\"planName\":\"ABC\",\"planValidity\":\"28\",\"planDetails\":\"XYZ\",\"planPrice\":\"179\"}";
-        mockMvc.perform(MockMvcRequestBuilders.post("/admin/addPlan")
-		.contentType(MediaType.APPLICATION_JSON)
-		.content(newPlan)
-		.accept(MediaType.APPLICATION_JSON))
-		.andExpect(status().isOk())
-		.andReturn();
+    public void testGetPlanAll() throws Exception {
+    	
+        mockMvc.perform(get("/admin/plan"))
+        .andExpect(MockMvcResultMatchers.status().isOk())
+        .andDo(print())
+        .andExpect(content().contentType("application/json"))
+			.andExpect(jsonPath("$").isArray())
+			.andReturn();
     }
-	
-	@Test
-	@Transactional
-    public void BE_Get_Plan() throws Exception {
-	 	mockMvc.perform(MockMvcRequestBuilders.get("/admin/getAllPlan")
-		.contentType(MediaType.APPLICATION_JSON)
-		.accept(MediaType.APPLICATION_JSON))
-		.andExpect(status().isOk())
-		.andExpect(MockMvcResultMatchers.jsonPath("$").isNotEmpty())
-		.andReturn();
+    
+    @Test
+    public void testGetPlanById() throws Exception {
+    	Long Id=1L;
+    	
+        mockMvc.perform(get("/admin/plan").param("id", "1"))
+        .andExpect(MockMvcResultMatchers.status().isOk())
+        .andDo(print())
+        .andExpect(content().contentType("application/json"))
+			.andExpect(jsonPath("$").isArray())
+			.andReturn();
+    }
+    
+    @Test
+    public void testGetRechargeAll() throws Exception {
+    	
+        mockMvc.perform(get("/admin/recharge"))
+        .andExpect(MockMvcResultMatchers.status().isOk())
+        .andDo(print())
+        .andExpect(content().contentType("application/json"))
+			.andExpect(jsonPath("$").isArray())
+			.andReturn();
+    }
+    
+    @Test
+    public void testGetRechargeById() throws Exception {
+    	Long Id=1L;
+    	
+        mockMvc.perform(get("/admin/recharge").param("id", "1"))
+        .andExpect(MockMvcResultMatchers.status().isOk())
+        .andDo(print())
+        .andExpect(content().contentType("application/json"))
+			.andExpect(jsonPath("$").isArray())
+			.andReturn();
+    }
+    
+    @Test
+    public void testGetAddonById() throws Exception {
+    	Long Id=1L;
+    	
+        mockMvc.perform(get("/admin/addon").param("id", "1"))
+        .andExpect(MockMvcResultMatchers.status().isOk())
+        .andDo(print())
+        .andExpect(content().contentType("application/json"))
+			.andExpect(jsonPath("$").isArray())
+			.andReturn();
+    }
+    
+    @Test
+    public void testGetAddonAll() throws Exception {
+    	
+        mockMvc.perform(get("/admin/addon"))
+        .andExpect(MockMvcResultMatchers.status().isOk())
+        .andDo(print())
+        .andExpect(content().contentType("application/json"))
+			.andExpect(jsonPath("$").isArray())
+			.andReturn();
+    }
+    
+    @Test
+    public void test_case1() {
+    String directoryPath = "src/main/java/com/examly/springapp/controller";
+     File directory = new File(directoryPath);
+     assertTrue(directory.exists() && directory.isDirectory());;
+     }
+
+
+   @Test
+   public void test_case2() {
+   String filePath = "src/main/java/com/examly/springapp/controller/PlanController.java";
+   File file = new File(filePath);
+   assertTrue(file.exists() && file.isFile());;
+
+    }
+   
+   @Test
+   public void test_case3() {
+   String directoryPath = "src/main/java/com/examly/springapp/model";
+    File directory = new File(directoryPath);
+    assertTrue(directory.exists() && directory.isDirectory());;
     }
 
-	@Test
-	@Transactional
-    public void BE_Update_Plan() throws Exception {
-        String newPlan = "{\"planId\":\"01\",\"planType\":\"prepaid\",\"planName\":\"ABC\",\"planValidity\":\"28\",\"planDetails\":\"XYZ\",\"planPrice\":\"179\"}";
-        mockMvc.perform(MockMvcRequestBuilders.put("/admin/editPlan")
-		.param("planId","01")
-		.contentType(MediaType.APPLICATION_JSON)
-		.content(newPlan)
-		.accept(MediaType.APPLICATION_JSON))
-		.andExpect(status().isOk())
-		.andReturn();
-    }
+
+  @Test
+  public void test_case4() {
+  String filePath = "src/main/java/com/examly/springapp/model/Plan.java";
+  File file = new File(filePath);
+  assertTrue(file.exists() && file.isFile());;
+
+   }
+
 }
