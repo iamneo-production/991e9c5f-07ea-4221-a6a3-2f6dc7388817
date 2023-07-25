@@ -5,6 +5,7 @@ import { AddPrepaidComponent } from './admin/prepaid/add-prepaid/add-prepaid.com
 import { PrepaidPlanComponent } from './admin/prepaid/prepaid-plan/prepaid-plan.component';
 import { UpdatePrepaidComponent } from './admin/prepaid/update-prepaid/update-prepaid.component';
 
+
 const routes: Routes = [
   { path: '', redirectTo: 'admin', pathMatch: 'full' },
   { path: 'admin', component: AdminNavbarComponent },

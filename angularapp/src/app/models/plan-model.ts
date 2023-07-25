@@ -1,4 +1,4 @@
-export class Plan {
+export class PlanModel {
     id:number;
     planName:string;
     planPrice:string;
