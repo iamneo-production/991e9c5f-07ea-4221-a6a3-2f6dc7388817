@@ -1,0 +1,44 @@
+<html>
+    <!-- <head>
+        <link rel="stylesheet" href="login.component.css">
+    </head> -->
+<body>
+<nav style="background-color: #4b0202;">
+    <h2 style="color: white">Login</h2>
+</nav><br>
+        <form [formGroup]="loginForm">
+            <div class="input">
+                
+                <input type="email" [(ngModel)]="login.email" formControlName="Email"
+                placeholder="Enter email"
+                required><br>
+                <span style="margin-right: 335px;" class="text-danger" *ngIf="!Email?.valid && (Email?.touched || Email?.dirty)">
+                    <span class="text-danger" *ngIf="Email?.errors?.['required']">
+                        Email is Required*
+                    </span>
+                    <span class="text-danger" *ngIf="Email?.errors?.['email']">
+                        Email is invalid
+                    </span>
+                </span>
+            </div><br>
+            <div class="input">
+                
+                <input type="password" [(ngModel)]="login.password" formControlName="Password"
+                placeholder="Enter Password"
+                required><br>
+                <span style="margin-right: 300px;" class="text-danger" *ngIf="!password?.valid && (password?.touched || password?.dirty)">
+                    <span class="text-danger" *ngIf="password?.errors?.['required']">
+                        Password is Required*
+                    </span>
+                    <span class="text-danger" *ngIf="password?.errors?.['pattern']">
+                        Password is invalid
+                    </span>
+                </span>
+            </div><br>
+            <p>
+                <button class="button" (click)="logindata()" type="submit">Login</button>&nbsp;&nbsp; 
+                New User/admin?&nbsp;<a href="#" routerLink="/signup">Sign Up</a>
+            </p>
+        </form>
+    </body>
+</html>
