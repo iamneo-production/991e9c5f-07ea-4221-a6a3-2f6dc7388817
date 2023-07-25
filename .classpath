@@ -57,6 +57,7 @@
 		</attributes>
 	</classpathentry>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 	<classpathentry excluding="**" kind="src" output="target/classes" path="src/main/resources">
 		<attributes>
@@ -72,6 +73,8 @@
 		</attributes>
 	</classpathentry>
 >>>>>>> NetFi_Portal-Shankar1307
+=======
+>>>>>>> 00d27c0611ab8a38dbc5bc95e7e6fef295d3215f
 	<classpathentry kind="src" output="target/test-classes" path="target/generated-test-sources/test-annotations">
 		<attributes>
 			<attribute name="optional" value="true"/>
