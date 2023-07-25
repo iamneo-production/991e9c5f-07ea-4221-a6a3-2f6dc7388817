@@ -1,0 +1,43 @@
+.container {
+    border: 1px solid #ccc;
+    /* padding: 20px; */
+    max-width: 400px;
+    margin: 50px auto;
+}
+
+h2 {
+    text-align: center;
+}
+
+.form-label {
+    margin: 20px auto;
+    font-size: 18px;
+}
+
+.rating {
+    display: flex;
+    justify-content: center;
+}
+
+.rating i {
+
+    font-size: 24px;
+    cursor: pointer;
+    padding: 5px;
+    margin-right: 5px;
+    /* color: #ccc; */
+}
+
+.rating i.checked {
+    color: orange;
+}
+
+.form-control {
+    border: 1px solid #cccccc;
+}
+
+.submit-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}

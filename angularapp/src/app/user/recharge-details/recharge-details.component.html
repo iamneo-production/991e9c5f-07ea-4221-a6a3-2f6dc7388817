@@ -1,0 +1,52 @@
+<div style="padding: 30px;">
+    <form [formGroup]="myForm" (ngSubmit)="registerUser()">
+      <div class="row">
+        <div class="col-6 input-style">
+          <input type="text" class="form-control" style="width:70%;height: 150%;" id="enterRechargeType"
+            placeholder="Enter Recharge Type" formControlName="rechargeType">
+          <span class="help-block" *ngIf="myForm.get('rechargeType').invalid && myForm.get('rechargeType').touched"
+            style="color: red;">Recharge Type is required!</span>
+        </div><br>
+        <div class="col-6 input-style">
+          <input type="email" class="form-control" style="width:70%;height: 150%;" id="enterEmailId"
+            placeholder="Enter Email Id" formControlName="email">
+          <span class="help-block" *ngIf="myForm.get('email').invalid && myForm.get('email').touched"
+            style="color: red;">Email is required and must be a valid email address!</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6 input-style">
+          <input type="text" class="form-control" style="width:70%;height: 150%;" id="enterName"
+            placeholder="Enter your Name" formControlName="name">
+          <span class="help-block" *ngIf="myForm.get('name').invalid && myForm.get('name').touched"
+            style="color: red;">Name is required!</span>
+        </div>
+        <div class="col-6 input-style">
+          <input type="text" class="form-control" style="width:70%;height: 150%;" id="enterRechargePlan"
+            placeholder="Enter Recharge Plan" formControlName="rechargePlan">
+          <span class="help-block" *ngIf="myForm.get('rechargePlan').invalid && myForm.get('rechargePlan').touched"
+            style="color: red;">Recharge Plan is required!</span>
+        </div>
+      </div>
+      <div class="row mt-5 mb-5">
+        <div class="col-6 input-style">
+          <input type="text" class="form-control" style="width:70%;height: 150%;" id="enterToRecharge"
+            placeholder="Enter Number To Recharge" formControlName="mobile">
+          <span class="help-block" *ngIf="myForm.get('mobile').invalid && myForm.get('mobile').touched"
+            style="color: red;">Number To Recharge is required!</span>
+        </div>
+        <div class="col-6 input-style">
+          <input type="number" class="form-control" style="width:70%;height: 150%;" id="enterRechargePrice"
+            placeholder="Recharge Price" formControlName="rechargePrice">
+          <span class="help-block" *ngIf="myForm.get('rechargePrice').invalid && myForm.get('rechargePrice').touched"
+            style="color: red;">Recharge Price is required and must be a number!</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 btn-style">
+          <button id="rechargeButton" class="btn btn-secondary">Recharge Plan</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  
