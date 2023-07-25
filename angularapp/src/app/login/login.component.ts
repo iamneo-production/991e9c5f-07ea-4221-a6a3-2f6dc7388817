@@ -50,8 +50,6 @@ export class LoginComponent implements OnInit {
       if (error.status == 409) {
         alert('Login Failed ! Invalid credentials . . .');
       }
-      // this.validation();
-      // console.log(error)
     });
   }
   validation() {

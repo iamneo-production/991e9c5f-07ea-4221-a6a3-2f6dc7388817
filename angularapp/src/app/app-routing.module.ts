@@ -4,10 +4,14 @@ import { AdminNavbarComponent } from './admin/admin-navbar/admin-navbar.componen
 import { AddPrepaidComponent } from './admin/prepaid/add-prepaid/add-prepaid.component';
 import { PrepaidPlanComponent } from './admin/prepaid/prepaid-plan/prepaid-plan.component';
 import { UpdatePrepaidComponent } from './admin/prepaid/update-prepaid/update-prepaid.component';
+import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'admin', pathMatch: 'full' },
   { path: 'admin', component: AdminNavbarComponent },
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: 'signup', component: RegisterComponent },
+  { path: 'login', component: LoginComponent },
   {
     path: 'admin', component: AdminNavbarComponent,
     children: [
