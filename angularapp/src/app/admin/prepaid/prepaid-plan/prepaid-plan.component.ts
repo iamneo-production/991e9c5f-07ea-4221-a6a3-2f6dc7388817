@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Plan } from 'src/app/models/plan';
+import { PlanModel } from 'src/app/models/plan-model';
 import { PlanService } from 'src/app/services/plan.service';
 
 @Component({
@@ -10,7 +10,7 @@ import { PlanService } from 'src/app/services/plan.service';
 })
 export class PrepaidPlanComponent implements OnInit {
 
-  allPlans: Plan[];
+  allPlans: PlanModel[];
 
   SearchText= '';
 

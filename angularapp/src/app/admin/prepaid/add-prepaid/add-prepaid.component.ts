@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { Plan } from 'src/app/models/plan';
+import { PlanModel } from 'src/app/models/plan-model';
 import { PlanService } from 'src/app/services/plan.service';
 
 @Component({
@@ -11,7 +11,7 @@ import { PlanService } from 'src/app/services/plan.service';
 })
 export class AddPrepaidComponent implements OnInit {
 
-  plans = new Plan();
+  plans = new PlanModel();
   validationForm: FormGroup;
 
   constructor(private router: Router, private planService: PlanService) { }
