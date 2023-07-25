@@ -1,0 +1,18 @@
+table {
+    border-collapse: separate;
+    border-spacing: 0 15px;
+  }
+
+  th {
+    color: white;
+    background-color: #800020;
+  }
+
+  td {
+    background-color: #ffd1d1;
+    width: 100px;
+  }
+
+
+
+
