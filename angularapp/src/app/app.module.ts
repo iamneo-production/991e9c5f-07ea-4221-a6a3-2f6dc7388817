@@ -16,6 +16,7 @@ import { UpdatePostpaidComponent } from './admin/postpaid/update-postpaid/update
 import { SearchPipe } from './services/search.pipe';
 import { AddonsComponent } from './user/addons/addons.component';
 import { PopularPlansComponent } from './user/popular-plans/popular-plans.component';
+import { SearchaddonPipe } from './services/searchaddon.pipe';
 
 
 @NgModule({
@@ -31,6 +32,7 @@ import { PopularPlansComponent } from './user/popular-plans/popular-plans.compon
     SearchPipe,
     AddonsComponent,
     PopularPlansComponent,
+    SearchaddonPipe,
   ],
   imports: [
     BrowserModule,
