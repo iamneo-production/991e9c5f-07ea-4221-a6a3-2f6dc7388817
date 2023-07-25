@@ -1,0 +1,20 @@
+<div class="container">
+    <h2>Feedback</h2>
+    <form (ngSubmit)="submitFeedback()">
+      <div class="mb-3">
+        <label for="rating" class="form-label">Rating:</label>
+        <div class="rating">
+          <span *ngFor="let star of stars" (click)="selectRating(star)">
+            <i class="fas fa-star" [class.checked]="rating === null ? false : rating >= star"></i>
+          </span>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="review" class="form-label">Review:</label>
+        <textarea id="review" [(ngModel)]="review" name="review" rows="8" class="form-control"></textarea>
+      </div>
+      <div class="submit-container">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </form>
+  </div>

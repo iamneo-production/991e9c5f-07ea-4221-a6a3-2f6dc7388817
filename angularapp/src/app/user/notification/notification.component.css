@@ -1,0 +1,20 @@
+/* 
+  p{
+    text-align: center;
+  }
+  */
+  .content-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .data-container {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .image-container {
+    text-align: right;
+  }
+  
