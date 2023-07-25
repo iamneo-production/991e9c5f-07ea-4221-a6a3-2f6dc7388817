@@ -7,9 +7,7 @@ import { Addon } from '../models/addon';
   providedIn: 'root'
 })
 export class AddonService {
-
- // addonurl="http://localhost:3000/addons";
-
+  
  addonurl="http://localhost:8081/api/admin/addon";
 
  constructor(private httpClient: HttpClient) { }

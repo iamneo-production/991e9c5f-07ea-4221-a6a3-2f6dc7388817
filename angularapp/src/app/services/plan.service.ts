@@ -7,8 +7,7 @@ import { PlanModel } from '../models/plan-model';
   providedIn: 'root'
 })
 export class PlanService {
-
-    // private baseUrl="http://localhost:3000/planModel";
+  
     private baseUrl="https://8080-babdbceaaedaaecdababecfbdcbbefdaddee.project.examly.io/admin/plan";
     constructor(private httpClient: HttpClient) { }
   
