@@ -9,14 +9,26 @@ then
 		cd /home/coder/project/workspace/springapp/;
 		mvn clean test;
     else
-        echo "BE_Add_User FAILED";
-        echo "BE_Add_Plan FAILED";
-        echo "BE_Get_Plan FAILED";
-        echo "BE_Update_Plan FAILED";
+        echo "testGetPlanAll FAILED";
+        echo "testGetPlanById FAILED";
+        echo "testGetRechargeAll FAILED";
+        echo "testGetRechargeById FAILED";
+         echo "testGetAddonById FAILED";
+        echo "testGetAddonAll FAILED";
+        echo "test_case1 FAILED";
+        echo "test_case2 FAILED";
+         echo "test_case3 FAILED";
+        echo "test_case4 FAILED";
     fi
 else
-	echo "BE_Add_User FAILED";
-    echo "BE_Add_Plan FAILED";
-    echo "BE_Get_Plan FAILED";
-    echo "BE_Update_Plan FAILED";
+	 echo "testGetPlanAll FAILED";
+        echo "testGetPlanById FAILED";
+        echo "testGetRechargeAll FAILED";
+        echo "testGetRechargeById FAILED";
+         echo "testGetAddonById FAILED";
+        echo "testGetAddonAll FAILED";
+        echo "test_case1 FAILED";
+        echo "test_case2 FAILED";
+         echo "test_case3 FAILED";
+        echo "test_case4 FAILED";
 fi
