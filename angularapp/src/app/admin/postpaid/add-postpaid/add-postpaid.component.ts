@@ -33,17 +33,13 @@ export class AddPostpaidComponent implements OnInit {
       this.goToPostpaidList();
     }, error => console.log(error));
   }
-  title = 'angularapp';
-
   validate: string = "postpaid";
   onSubmit() {
-    // console.log(this.plans);
     if (this.plans.planType.toLowerCase() == this.validate) {
       this.addUser();
     } else {
       alert("Enter postpaid plan details only . . .");
     }
-    // this.addUser();
   }
 
   goToPostpaidList() {
