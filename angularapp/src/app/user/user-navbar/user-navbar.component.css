@@ -1,0 +1,8 @@
+  ul.first-nav li.nav-item {
+    margin-left: 100px;
+    margin-right: 0px; 
+}
+
+ul.second-nav li.nav-item {
+    margin-right: 50px;
+  }
