@@ -4,7 +4,6 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-// import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { PrepaidPlanComponent } from './admin/prepaid/prepaid-plan/prepaid-plan.component';
 import { AddPrepaidComponent } from './admin/prepaid/add-prepaid/add-prepaid.component';
@@ -17,11 +16,17 @@ import { SearchPipe } from './services/search.pipe';
 import { AddonsComponent } from './user/addons/addons.component';
 import { PopularPlansComponent } from './user/popular-plans/popular-plans.component';
 import { SearchaddonPipe } from './services/searchaddon.pipe';
+import { ReviewComponent } from './user/review/review.component';
+import { ShowReviewComponent } from './user/review/show-review/show-review.component';
+import { RechargeDetailsComponent } from './user/recharge-details/recharge-details.component';
+import { UserNavbarComponent } from './user/user-navbar/user-navbar.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    UserNavbarComponent,
+    AdminNavbarComponent,
     PrepaidPlanComponent,
     AddPrepaidComponent,
     UpdatePrepaidComponent,
@@ -33,13 +38,16 @@ import { SearchaddonPipe } from './services/searchaddon.pipe';
     AddonsComponent,
     PopularPlansComponent,
     SearchaddonPipe,
+    ReviewComponent,
+    ShowReviewComponent,
+    RechargeDetailsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -29,7 +29,6 @@ export class AddPrepaidComponent implements OnInit {
 
   addUser() {
     this.planService.addPlan(this.plans).subscribe(data => {
-      // console.log(data);
       alert("prepaid data added successfully");
       this.goToPrepaidList();
     }, error => console.log(error));
@@ -38,13 +37,11 @@ export class AddPrepaidComponent implements OnInit {
 
   validate: string = "prepaid";
   onSubmit() {
-    // console.log(this.plans);
     if (this.plans.planType.toLowerCase() == this.validate) {
       this.addUser();
     } else {
       alert("Enter only prepaid plan details . . .");
     }
-    // this.addUser();
   }
 
   goToPrepaidList() {

@@ -18,7 +18,7 @@ import { ReviewComponent } from './user/review/review.component';
 
 
 const routes: Routes = [
-  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  // { path: '', redirectTo: 'login', pathMatch: 'full' },
   {
     path: "admin", component: AdminNavbarComponent,
     children: [
@@ -32,8 +32,8 @@ const routes: Routes = [
       // { path: 'addons', component: AddonPlanComponent },
       // { path: 'addAddon', component: AddAddonComponent },
       // { path: 'editAddon/:id', component: UpdateAddonComponent }
-    ],
-    canActivate: [AuthGuard]
+    ]
+    // canActivate: [AuthGuard]
   },
   {
     path: "user", component: UserNavbarComponent,
@@ -46,8 +46,8 @@ const routes: Routes = [
       { path: "addRecharge", component: RechargeDetailsComponent },
       { path: "viewRecharge", component: NotificationComponent },
       {path: "addReview", component: ReviewComponent}
-    ],
-    canActivate: [AuthGuard]
+    ]
+    // canActivate: [AuthGuard]
   }
 ];
 

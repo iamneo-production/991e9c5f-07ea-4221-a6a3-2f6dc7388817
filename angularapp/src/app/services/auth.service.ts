@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 export class AuthService {
 
   isLoggin = false;
-  constructor() { }
+  constructor( ) { }
 
   setIsLoggin(loggin: boolean){
     this.isLoggin = loggin;
