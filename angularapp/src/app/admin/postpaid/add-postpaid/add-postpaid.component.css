@@ -15,3 +15,13 @@
     top: 200px;
     width: 30%;
   }
+
+  span {
+    color: red;
+  }
+
+  .btn{
+
+  background-color: brown; 
+  margin-left: 650px;
+  }
