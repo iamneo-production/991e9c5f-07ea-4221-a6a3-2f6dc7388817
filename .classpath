@@ -58,7 +58,10 @@
 	</classpathentry>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 488183c58d7f465de4a8d783edaa66f3f913f8e7
 	<classpathentry excluding="**" kind="src" output="target/classes" path="src/main/resources">
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>
@@ -72,9 +75,12 @@
 			<attribute name="optional" value="true"/>
 		</attributes>
 	</classpathentry>
+<<<<<<< HEAD
 >>>>>>> NetFi_Portal-Shankar1307
 =======
 >>>>>>> 00d27c0611ab8a38dbc5bc95e7e6fef295d3215f
+=======
+>>>>>>> 488183c58d7f465de4a8d783edaa66f3f913f8e7
 	<classpathentry kind="src" output="target/test-classes" path="target/generated-test-sources/test-annotations">
 		<attributes>
 			<attribute name="optional" value="true"/>
