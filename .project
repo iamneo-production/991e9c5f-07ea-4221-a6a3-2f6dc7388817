@@ -22,11 +22,27 @@
 	</natures>
 	<filteredResources>
 		<filter>
+<<<<<<< HEAD
 <<<<<<<<< Temporary merge branch 1
 			<id>1686144833162</id>
 =========
 			<id>1690262493873</id>
 >>>>>>>>> Temporary merge branch 2
+=======
+<<<<<<< HEAD
+			<id>1686740503943</id>
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+			<id>1690200554654</id>
+=======
+			<id>1690196154359</id>
+>>>>>>> NetFi_Portal-Shankar1307
+=======
+			<id>1690262493873</id>
+>>>>>>> 00d27c0611ab8a38dbc5bc95e7e6fef295d3215f
+>>>>>>> c4145a056e857c810ee1d6a90c4ae3a52cdc0cc7
+>>>>>>> dc440ab81b2c6ce613ef22df183bb51eb184510d
 			<name></name>
 			<type>30</type>
 			<matcher>

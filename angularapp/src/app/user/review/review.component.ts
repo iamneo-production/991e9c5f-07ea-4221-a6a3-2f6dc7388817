@@ -48,6 +48,7 @@ export class ReviewComponent implements OnInit {
   goToPlans(){
     console.log(this.rechargeService.tab)
     this.router.navigate([this.rechargeService.tab]);
+    // console.log()
   }
 
 }
