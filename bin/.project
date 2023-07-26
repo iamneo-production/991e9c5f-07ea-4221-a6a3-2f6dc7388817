@@ -22,24 +22,12 @@
 	</natures>
 	<filteredResources>
 		<filter>
-<<<<<<< HEAD
-			<id>1686740503943</id>
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-			<id>1690200554654</id>
-=======
 			<id>1690196154359</id>
->>>>>>> NetFi_Portal-Shankar1307
-=======
-			<id>1690262493873</id>
->>>>>>> 00d27c0611ab8a38dbc5bc95e7e6fef295d3215f
->>>>>>> c4145a056e857c810ee1d6a90c4ae3a52cdc0cc7
 			<name></name>
 			<type>30</type>
 			<matcher>
 				<id>org.eclipse.core.resources.regexFilterMatcher</id>
-				<arguments>node_modules|.git|__CREATED_BY_JAVA_LANGUAGE_SERVER__</arguments>
+				<arguments>node_modules|\.git|__CREATED_BY_JAVA_LANGUAGE_SERVER__</arguments>
 			</matcher>
 		</filter>
 	</filteredResources>
