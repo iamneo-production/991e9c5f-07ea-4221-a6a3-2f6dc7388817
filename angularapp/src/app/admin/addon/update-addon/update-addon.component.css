@@ -1,0 +1,17 @@
+.form-control.ng-touched.ng-invalid{
+    border: 2px solid red;
+  }
+  
+  .container{
+    margin-top: 150px; 
+    margin-left: 200px;
+    width: 30%;
+  }
+  
+  .division{
+    position: absolute;
+    left: 40%;
+    margin-left: 125px;
+    top: 200px;
+    width: 30%;
+  }
