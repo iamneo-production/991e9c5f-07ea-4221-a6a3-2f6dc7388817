@@ -1,0 +1,51 @@
+body{
+    background-color: #b7acac;  
+}
+select{
+    width: 30%;
+    padding: 10px 15px;
+    margin-bottom: 25px;
+    border-color: black;
+    border-width: 2px;
+    /* background-color: #b3afaf; */
+    margin-left: 50px;
+}
+option{
+    width: 30%;
+    /* background-color: #b3afaf; */
+}
+input[type="email"] {
+    /* background-color: #b3afaf; */
+    width: 30%;
+    padding: 10px 15px;
+    margin-bottom: 25px;
+    border-color: black;
+    border-width: 2px;
+    margin-left: 50px;
+}
+input[type="text"]{
+    /* background-color: #b3afaf; */
+    width: 30%;
+    padding: 10px 15px;
+    margin-bottom: 25px;
+    border-color: black;
+    border-width: 2px;
+    margin-left: 50px;
+}
+input[type="password"]{
+    /* background-color: #b3afaf; */
+    width: 30%;
+    padding: 10px 15px;
+    margin-bottom: 25px;
+    border-color: black;
+    border-width: 2px;
+    margin-left: 50px;
+}
+.button{
+    /* background-color: #1a207a; color: white; */
+    margin-left: 160px;
+    padding: 05px 15px;
+ }
+ .login{
+    margin-left: 122px;
+ }
