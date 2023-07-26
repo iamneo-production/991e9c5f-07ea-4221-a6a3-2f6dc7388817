@@ -1,0 +1,29 @@
+input[type="email"] {
+    background-color: #b3afaf;
+    /* text-align: center; */
+    width: 30%;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+}
+input[type="password"]{
+    background-color: #b3afaf;
+    /* text-align: center; */
+    width: 30%;
+    padding: 10px 15px;
+    margin-bottom: 25px;
+}
+input[type="text"]{
+    background-color: #b3afaf;
+    /* text-align: center; */
+    width: 30%;
+    padding: 10px 15px;
+    margin-bottom: 25px;
+}
+body {
+    background-color: #b7acac; 
+    text-align: center;
+}
+.button{
+   background-color: #1a207a; color: white;
+   padding: 05px 15px;
+}
