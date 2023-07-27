@@ -1,3 +1,4 @@
+<p>add-postpaid works!</p>
 <form [formGroup]="validationForm">
 
     <div class="container">
@@ -27,7 +28,7 @@
         <input type="text" style="height: 50px;" class="form-control" autocomplete="off" [(ngModel)]="plans.planPrice"
           formControlName="planPrice" name="planPrice" id="planPrice" placeholder="Enter Plan Price">
         <span class="help-block" *ngIf="!validationForm.get('planPrice').valid && validationForm.get('planPrice').touched"
-          >Please enter valid price !</span>
+         >Please enter valid price !</span>
       </div><br>
       <div class="form-group">
         <input type="text" style="height: 50px;" class="form-control" autocomplete="off" [(ngModel)]="plans.planOffer"
@@ -47,6 +48,6 @@
     </div>
   
     <button type="submit" (click)="onSubmit()" [disabled]="!validationForm.valid"
-       class="btn btn-danger">Add Plan</button>
+      class="btn btn-danger">Add Plan</button>
   
   </form>

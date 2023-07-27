@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
-import { PlanModel} from 'src/app/models/plan-model';
+import { Plan } from 'src/app/models/plan';
 import { PlanService } from 'src/app/services/plan.service';
 
 @Component({
@@ -12,7 +12,7 @@ import { PlanService } from 'src/app/services/plan.service';
 export class UpdatePrepaidComponent implements OnInit {
 
   id: number;
-  prepaid = new PlanModel();
+  prepaid = new Plan();
   validationForm: FormGroup;
 
   constructor(private planService: PlanService, private router: Router, private route: ActivatedRoute) { }
@@ -45,11 +45,13 @@ export class UpdatePrepaidComponent implements OnInit {
 
   validate: string = "prepaid";
   onSubmit() {
+    // console.log(this.prepaid);
     if (this.prepaid.planType.toLowerCase() == this.validate) {
       this.updatePlan();
     } else {
       alert("Enter only prepaid plan details . . .");
     }
+    // this.addUser();
   }
 
   goToPrepaidList() {
