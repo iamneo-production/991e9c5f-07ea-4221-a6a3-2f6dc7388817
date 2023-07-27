@@ -1,6 +1,6 @@
-package com.examly.springapp;
-import com.examly.springapp.PlanRepo;
-import com.examly.springapp.Plan;
+package com.examly.springapp.controller;
+import com.examly.springapp.model.PlanRepo;
+import com.examly.springapp.model.Plan;
 
 
 import java.util.Optional;
