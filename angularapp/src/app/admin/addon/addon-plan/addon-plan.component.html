@@ -14,7 +14,7 @@
           <th scope="col">Plan Price</th>
         </tr>
       </thead>
-      <tbody *ngFor="let plans of addon | searchaddon: SearchAddon" style="background-color: #ffd1d1">
+      <tbody *ngFor="let plans of addon" style="background-color: #ffd1d1">
         <tr>
           <td>{{plans.addonType}} <br><br> Description: {{plans.addonDetails}} ({{plans.addonValidity}}) <br> </td>
           <td>{{plans.addonName}} </td>

@@ -14,7 +14,7 @@
           <th scope="col">Plan Price</th>
         </tr>
       </thead>
-      <tbody *ngFor="let plans of allPlans | search: SearchText">
+      <tbody *ngFor="let plans of allPlans">
         <tr>
           <td>{{plans.planType}} <br><br> Description: {{plans.planDescription}} (validity for {{plans.planValidity}})
             <br> Offers: <img
