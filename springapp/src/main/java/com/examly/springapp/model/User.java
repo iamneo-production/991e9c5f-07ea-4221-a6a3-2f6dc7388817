@@ -1,11 +1,9 @@
 package com.examly.springapp.model;
 
 import java.util.List;
-
+import com.examly.springapp.model.Recharge;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
-
 import javax.persistence.*;
-
 
 @Entity
 @Table(name="users1",
@@ -14,8 +12,7 @@ import javax.persistence.*;
 				@UniqueConstraint(columnNames="email")
 		})
 public class User {
-
-	@Id
+    @Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String email;
@@ -24,11 +21,12 @@ public class User {
 	private String mobileNumber;
 	private String password;
 	private String confirmpassword;
+
 	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
 	@JsonManagedReference
     private List<Recharge> rechargeModel;
-	
-	public User() {
+
+    public User() {
 		
 	}
 	
@@ -100,11 +98,12 @@ public class User {
 		this.confirmpassword = confirmpassword;
 	}
 
-	public List<Recharge> getRechargeModels() {
-		return rechargeModels;
+	public List<Recharge> getRechargeModel() {
+		return rechargeModel;
 	}
 
-	public void setRechargeModels(List<Recharge> rechargeModel) {
+	public void setRechargeModel(List<Recharge> rechargeModel) {
 		this.rechargeModel = rechargeModel;
 	}
+
 }

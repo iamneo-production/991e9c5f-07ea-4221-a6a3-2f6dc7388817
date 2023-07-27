@@ -1,22 +1,15 @@
 package com.examly.springapp.model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.examly.springapp.model.User;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name="recharge_model")
 public class Recharge {
-
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+    @Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String rechargeType;
 	private String mobile;
@@ -24,16 +17,15 @@ public class Recharge {
 	private String email;
 	private String rechargePlan;
 	private Integer rechargePrice;
+
 	@ManyToOne
     @JoinColumn(name = "user_id")
 	@JsonBackReference
     private User user;
-	
-	public Recharge() {
+     
+    public Recharge() {
 		
 	}
-
-	
 
 	public Recharge(Long id, String rechargeType, String mobile, String name, String email, String rechargePlan,
 			Integer rechargePrice, User user) {
@@ -46,8 +38,6 @@ public class Recharge {
 		this.rechargePrice = rechargePrice;
 		this.user = user;
 	}
-
-
 
 	public Long getId() {
 		return id;
@@ -110,5 +100,4 @@ public class Recharge {
 	public void setUser(User user) {
 		this.user = user;
 	}
-		
 }
