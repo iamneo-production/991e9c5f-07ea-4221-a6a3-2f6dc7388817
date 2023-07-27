@@ -1,37 +1,33 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
 import { Addon } from '../models/addon';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
-export class AddonService {
+export class AddonService {addonurl="http://localhost:8081/api/admin/addon";
 
- // addonurl="http://localhost:3000/addons";
+constructor(private httpClient: HttpClient) { }
 
- addonurl="http://localhost:8081/api/admin/addon";
+getAllAddonPlans(): Observable<Addon[]>{
+  return this.httpClient.get<Addon[]>(`${this.addonurl}`);
+}
 
- constructor(private httpClient: HttpClient) { }
+addAddonPlan(addon: Addon): Observable<Object>{
+  return this.httpClient.post(`${this.addonurl}`, addon);
+}
 
- getAllAddonPlans(): Observable<Addon[]>{
-   return this.httpClient.get<Addon[]>(`${this.addonurl}`);
- }
+getAddonPlanById(id: number): Observable<Addon>{
+  return this.httpClient.get<Addon>(`${this.addonurl}/${id}`);
+}
 
- addAddonPlan(addon: Addon): Observable<Object>{
-   return this.httpClient.post(`${this.addonurl}`, addon);
- }
+editAddonPlan(id: number, addon: Addon): Observable<any>{
+  return this.httpClient.put(`${this.addonurl}/${id}`, addon);
+}
 
- getAddonPlanById(id: number): Observable<Addon>{
-   return this.httpClient.get<Addon>(`${this.addonurl}/${id}`);
- }
-
- editAddonPlan(id: number, addon: Addon): Observable<any>{
-   return this.httpClient.put(`${this.addonurl}/${id}`, addon);
- }
-
- deleteAddonPlan(id: number): Observable<any>{
-   console.log('deleted');
-   return this.httpClient.delete(`${this.addonurl}/${id}`);
- }
+deleteAddonPlan(id: number): Observable<any>{
+  console.log('deleted');
+  return this.httpClient.delete(`${this.addonurl}/${id}`);
+}
 }
