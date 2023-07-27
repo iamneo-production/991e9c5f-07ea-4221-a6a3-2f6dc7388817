@@ -2,7 +2,7 @@
     <input placeholder="Type here to search plans" [(ngModel)]="SearchText" name="SearchText">
   </div>
   
-  <div class="container" *ngFor="let plan of addonData | searchaddon: SearchText; let i=index ">
+  <div class="container" *ngFor="let plan of addonData; let i=index ">
       <div class="card card-container col-md-10 d-flex justify-content-between" [ngClass]="{'color-change': i%2!==0}">
         <span class="badge text-bg-dark b1">{{ plan.addonType }}</span>
         <div class="row">

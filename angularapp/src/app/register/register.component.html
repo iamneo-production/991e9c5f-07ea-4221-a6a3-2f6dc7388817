@@ -1,4 +1,4 @@
-<html>
+<!-- <html>
 <body >
     <nav style="background-color: #4b0202;">
         <h1 style="color: white;text-align:center">Register</h1>
@@ -58,6 +58,76 @@
             <input type="password"
             placeholder="Confirm Password" name="confirmpassword" [(ngModel)]="details.confirmpassword" formControlName="Confirmpassword">
                 <span class="text-danger" *ngIf="registerForm.errors?.['PasswordNoMatch'] && (confirmpassword?.touched || confirmpassword?.dirty)">
+                    Password and Confirm Password must be match
+                </span>
+        </div>
+        <button class="button" type="submit" (click)="addRegister()" [disabled]="!registerForm.valid">Submit</button><br><br>
+        <p class="login">Already a user? <a href="#" routerLink="/login">Login</a> </p>
+    </form>
+</body>
+</html> -->
+
+<html>
+    
+<body >
+    <nav style="background-color: #4b0202;">
+        <h1 style="color: white;text-align:center">Register</h1>
+    </nav>
+    <form [formGroup]="registerForm">
+        <div class="input">
+            <input type="text" 
+            placeholder="Enter Admin/User" name="role" [(ngModel)]="details.role" formControlName="role">
+            <span class="text-danger" *ngIf="!person?.valid && person?.touched">
+                Select any one*
+        </span>
+        </div>
+        <div class="input">
+            <input type="email"
+            placeholder="Enter email" name="email" [(ngModel)]="details.email" formControlName="Email">
+            <span class="text-danger" *ngIf="!email?.valid && (email?.touched || email?.dirty)">
+                    <span class="text-danger" *ngIf="email.hasError('required')">
+                        Email is Required*
+                    </span>
+                    <span class="text-danger" *ngIf="email.hasError('pattern')">
+                        Email is invalid
+                    </span>
+            </span>
+        </div>
+        <div class="input">
+            <input type="text"
+            placeholder="Enter Username" name="username" [(ngModel)]="details.userName" formControlName="Username">
+            <span class="text-danger" *ngIf="!username?.valid && (username?.touched || username?.dirty)">
+                Username is Required*
+        </span>
+        </div>
+        <div class="input">
+            <input type="text" 
+            placeholder="Enter Mobilenumber" name="mobilenumber" [(ngModel)]="details.mobileNumber" formControlName="Mobilenumber">
+            <span class="text-danger" *ngIf="!mobilenumber?.valid && (mobilenumber?.touched || mobilenumber?.dirty)">
+                <span class="text-danger" *ngIf="mobilenumber.hasError('required')">
+                    Mobilenumber is Required*
+                </span>
+                <span class="text-danger" *ngIf="mobilenumber.hasError('pattern')">
+                    Mobilenumber is invalid
+                </span>
+        </span>
+        </div>
+        <div class="input">
+            <input type="password"
+            placeholder="Password" name="password" [(ngModel)]="details.password" formControlName="Password">
+            <span class="text-danger" *ngIf="!password?.valid && (password?.touched || password?.dirty)">
+                <span class="text-danger" *ngIf="password.hasError('required')">
+                    Password is Required*
+                </span>
+                <span class="text-danger" *ngIf="password.hasError('pattern')">
+                    Password is invalid
+                </span>
+        </span>
+        </div>
+        <div class="input" >
+            <input type="password"
+            placeholder="Confirm Password" name="confirmpassword" [(ngModel)]="details.confirmpassword" formControlName="Confirmpassword">
+                <span class="text-danger" *ngIf="registerForm.hasError('PasswordNoMatch') && (confirmpassword?.touched || confirmpassword?.dirty)">
                     Password and Confirm Password must be match
                 </span>
         </div>

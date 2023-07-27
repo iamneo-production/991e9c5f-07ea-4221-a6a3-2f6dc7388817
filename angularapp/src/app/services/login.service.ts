@@ -19,4 +19,13 @@ export class LoginService {
    addLogin(registerclass: Registerclass): Observable<any>{
     return this.httpClient.post(`${this.loginurl}`, registerclass);
   }
+
+  userId: number;
+
+  setUserId(userId: number){
+    this.userId = userId;
+  }
+  getUserId(): number {
+    return this.userId;
+ }
 }
