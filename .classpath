@@ -87,10 +87,14 @@
 =======
 >>>>>>> 00d27c0611ab8a38dbc5bc95e7e6fef295d3215f
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 874f18bccd1e417f5baeaef62bc5a0bc866d1a3c
 =======
 >>>>>>> c4145a056e857c810ee1d6a90c4ae3a52cdc0cc7
 >>>>>>> dc440ab81b2c6ce613ef22df183bb51eb184510d
+=======
+>>>>>>> 874f18bccd1e417f5baeaef62bc5a0bc866d1a3c
+>>>>>>> 23e44e0c609f48216ab56fbcc793b3193c1537a4
 	<classpathentry kind="src" output="target/test-classes" path="target/generated-test-sources/test-annotations">
 		<attributes>
 			<attribute name="optional" value="true"/>
