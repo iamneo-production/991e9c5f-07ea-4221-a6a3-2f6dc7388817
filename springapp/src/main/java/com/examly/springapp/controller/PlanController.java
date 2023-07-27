@@ -1,7 +1,7 @@
-package com.examly.springapp;
-import com.examly.springapp.PlanRepo;
-import com.examly.springapp.Plan;
+package com.examly.springapp.controller;
 
+import com.examly.springapp.repository.PlanRepo;
+import com.examly.springapp.model.Plan;
 
 import java.util.Optional;
 import org.springframework.web.bind.annotation.RestController;

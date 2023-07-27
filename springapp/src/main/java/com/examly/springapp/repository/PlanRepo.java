@@ -1,5 +1,5 @@
-package com.examly.springapp;
-import com.examly.springapp.Plan;
+package com.examly.springapp.repository;
+import com.examly.springapp.model.Plan;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
