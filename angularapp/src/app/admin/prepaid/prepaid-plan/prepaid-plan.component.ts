@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { PlanModel } from 'src/app/models/plan-model';
+import { Plan } from 'src/app/models/plan';
 import { PlanService } from 'src/app/services/plan.service';
 
 @Component({
@@ -9,7 +9,8 @@ import { PlanService } from 'src/app/services/plan.service';
   styleUrls: ['./prepaid-plan.component.css']
 })
 export class PrepaidPlanComponent implements OnInit {
-  allPlans: PlanModel[];
+
+  allPlans: Plan[];
 
   SearchText= '';
 
@@ -23,12 +24,14 @@ export class PrepaidPlanComponent implements OnInit {
     this.planService.getAllPlans().subscribe((data)=>{
       const prepaid = data.filter(plan => plan.planType.toLowerCase()==='prepaid');
       this.allPlans=prepaid;
+      // console.log(this.allPlans);
     });
   }
 
   goToAddPrepaid() {
     this.router.navigate(["admin/addPrepaid"])
   }
+
   updatePlan(id: number) {
     this.router.navigate(['admin/editPrepaid', id]);
   }
@@ -39,5 +42,6 @@ export class PrepaidPlanComponent implements OnInit {
       this.displayUser();
     })
   }
-}
 
+
+}
