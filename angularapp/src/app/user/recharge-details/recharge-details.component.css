@@ -1,0 +1,13 @@
+.btn-style {
+    /* position: relative; */
+    text-align: center;
+    margin-top: 50px;
+}
+.from-control.ng-touched.ng-invalid{
+    border: 2px solid red;
+  }
+  
+.row {
+    margin-top: 50px;
+    margin-bottom: 60px;
+}
