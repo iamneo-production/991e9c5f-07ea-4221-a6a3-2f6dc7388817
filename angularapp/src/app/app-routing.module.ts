@@ -15,10 +15,17 @@ import { UserNavbarComponent } from './user/user-navbar/user-navbar.component';
 import { AuthGuard } from './auth/auth.guard';
 import { ShowReviewComponent } from './user/review/show-review/show-review.component';
 import { ReviewComponent } from './user/review/review.component';
+import { AddAddonComponent } from './admin/addon/add-addon/add-addon.component';
+import { AddonPlanComponent } from './admin/addon/addon-plan/addon-plan.component';
+import { UpdateAddonComponent } from './admin/addon/update-addon/update-addon.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 
 const routes: Routes = [
-  // { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: 'login', component:LoginComponent},
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: 'signup', component: RegisterComponent},
   {
     path: "admin", component: AdminNavbarComponent,
     children: [
@@ -29,13 +36,14 @@ const routes: Routes = [
       { path: 'postpaid', component: PostpaidPlanComponent },
       { path: 'addPostpaid', component: AddPostpaidComponent },
       { path: 'editPostpaid/:id', component: UpdatePostpaidComponent },
-      // { path: 'addons', component: AddonPlanComponent },
-      // { path: 'addAddon', component: AddAddonComponent },
-      // { path: 'editAddon/:id', component: UpdateAddonComponent }
-    ]
+      { path: 'addons', component: AddonPlanComponent },
+      { path: 'addAddon', component: AddAddonComponent },
+      { path: 'editAddon/:id', component: UpdateAddonComponent }
+    ],
     // canActivate: [AuthGuard]
   },
   {
+    
     path: "user", component: UserNavbarComponent,
     children: [
       { path: '', redirectTo: 'popularPlans', pathMatch: 'full' },
@@ -46,8 +54,8 @@ const routes: Routes = [
       { path: "addRecharge", component: RechargeDetailsComponent },
       { path: "viewRecharge", component: NotificationComponent },
       {path: "addReview", component: ReviewComponent}
-    ]
-    // canActivate: [AuthGuard]
+    ],
+    // canActivate: [AuthGuard]9
   }
 ];
 

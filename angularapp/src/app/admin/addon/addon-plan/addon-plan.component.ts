@@ -12,17 +12,22 @@ import { AddonService } from 'src/app/services/addon.service';
 export class AddonPlanComponent implements OnInit {
 
   addon: Addon[];
+  
 
   SearchAddon = '';
 
   constructor(public addonService: AddonService, private router: Router) { }
 
   ngOnInit(): void {
+    
     this.getlist();
+    console.log(this.addon);
   }
 
   getlist() {
+    console.log(this.addon);
     this.addonService.getAllAddonPlans().subscribe(data => {
+      console.log(data);
       this.addon = data;
     }, error => console.log(error));
   }
