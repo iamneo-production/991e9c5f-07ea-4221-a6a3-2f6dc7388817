@@ -43,6 +43,7 @@ const routes: Routes = [
     // canActivate: [AuthGuard]
   },
   {
+    
     path: "user", component: UserNavbarComponent,
     children: [
       { path: '', redirectTo: 'popularPlans', pathMatch: 'full' },

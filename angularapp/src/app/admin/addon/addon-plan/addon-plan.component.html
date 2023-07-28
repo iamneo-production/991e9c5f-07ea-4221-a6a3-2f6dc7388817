@@ -1,3 +1,4 @@
+
 <div style="margin-left: 100px;">
     <br>
     <button type="button" (click)="goToAddAddon()" class="btn btn-light">Add Plan</button>
@@ -14,12 +15,12 @@
           <th scope="col">Plan Price</th>
         </tr>
       </thead>
-      <tbody *ngFor="let plans of addon" style="background-color: #ffd1d1">
+      <tbody *ngFor="let plans of addon">
         <tr>
-          <td>{{plans.addonType}} <br><br> Description: {{plans.addonDetails}} ({{plans.addonValidity}}) <br> </td>
+          <td>{{plans.addonType}} {{plans.addonId}} <br><br> Description: {{plans.addonDetails}} ({{plans.addonValidity}}) <br> </td>
           <td>{{plans.addonName}} </td>
           <td>{{plans.addonPrice}} ₹ <br><br><br>
-            <button type="button" id="editPrepaidPlan" (click)="updatelist(plans.id)" class="btn btn-default btn-sm"><svg
+            <button type="button" id="editPrepaidPlan" (click)="updatelist(plans.addonId)" class="btn btn-default btn-sm"><svg
                 xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square"
                 viewBox="0 0 16 16">
                 <path
@@ -27,7 +28,7 @@
                 <path fill-rule="evenodd"
                   d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
               </svg></button>
-            <button type="button" id="deletePrepaidPlan" (click)="deletelist(plans.id)" class="btn btn-default btn-sm"
+            <button type="button" id="deletePrepaidPlan" (click)="deletelist(plans.addonId)" class="btn btn-default btn-sm"
               style="margin-left: 20px;"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                 fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
                 <path

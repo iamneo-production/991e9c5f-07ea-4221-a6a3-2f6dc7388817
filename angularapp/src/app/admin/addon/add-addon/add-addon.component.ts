@@ -9,7 +9,9 @@ import { AddonService } from 'src/app/services/addon.service';
   templateUrl: './add-addon.component.html',
   styleUrls: ['./add-addon.component.css']
 })
-export class AddAddonComponent implements OnInit {addplans: Addon = new Addon();
+export class AddAddonComponent implements OnInit {
+  
+  addplans: Addon = new Addon();
   validationForm: FormGroup;
 
   constructor(private addonService: AddonService, private router: Router) { }
@@ -25,6 +27,7 @@ export class AddAddonComponent implements OnInit {addplans: Addon = new Addon();
   }
 
   addUser() {
+    console.log(this.addplans)
     this.addonService.addAddonPlan(this.addplans).subscribe(data => {
       alert("Addon Data Added Successfull ...")
       this.goToAddonsList();

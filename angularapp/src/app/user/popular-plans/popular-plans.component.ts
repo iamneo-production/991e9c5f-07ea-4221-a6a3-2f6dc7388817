@@ -21,6 +21,7 @@ export class PopularPlansComponent implements OnInit {
 
   displayPlans(){
     this.planService.getAllPlans().subscribe(data => {
+      console.log(data);
       this.allPlans=data;
     })
   }

@@ -1,24 +1,9 @@
-/* You can add global styles to this file, and also import other style files */
 
-/* body{
-    background-color: bisque;
-} */
+@import url('../node_modules/bootstrap/dist/css/bootstrap.css');
+
+
 body{
   background-color: lightslategray;
   font-family: Comic Sans MS;
   height: 100vh;
 }
-
-/* table {
-    border-collapse: separate;
-    border-spacing: 0 15px;
-  }
-  th {
-    background-color: maroon;
-    color: white;
-  }
-  th,
-  td {
-    width: 150px;
-    padding: 5px;
-  } */
