@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class ReviewService {
 
-  private feedbackURL = "http://localhost:8081/api/admin/review";
+  private feedbackURL = "https://8080-eeeabfbfadbabcbefbffdababecfbdcbbefdaddee.project.examly.io/api/admin/review";
   constructor(private httpClient: HttpClient) { }
 
   addReview(feedback: ReviewModel): Observable<Object> {

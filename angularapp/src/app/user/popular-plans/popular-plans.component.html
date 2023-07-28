@@ -1,6 +1,6 @@
-<!-- <div class="search-box">
+<div class="search-box">
     <input placeholder="Type here to search plans" [(ngModel)]="SearchText" name="SearchText">
-  </div> -->
+  </div>
   <div class="container" *ngFor="let plan of allPlans; let i=index">
       <div class="card card-container col-md-10 d-flex justify-content-between" [ngClass]="{'color-change': i%2!==0}">
         <span class="badge text-bg-dark b1">{{ plan.planType }}</span>

@@ -27,7 +27,6 @@ export class AddonPlanComponent implements OnInit {
   getlist() {
     console.log(this.addon);
     this.addonService.getAllAddonPlans().subscribe(data => {
-      console.log(data);
       this.addon = data;
     }, error => console.log(error));
   }

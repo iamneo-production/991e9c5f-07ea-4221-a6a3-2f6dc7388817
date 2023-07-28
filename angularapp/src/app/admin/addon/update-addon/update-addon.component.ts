@@ -31,9 +31,7 @@ export class UpdateAddonComponent implements OnInit {
     })
 
     this.id = this.route.snapshot.params['id'];
-    // console.log(typeof(this.id));
     this.addonService.getAddonPlanById(this.id).subscribe(data => {
-      console.log(data);
       this.updateplan = data;
     }, error => console.log(error));
 
@@ -41,7 +39,6 @@ export class UpdateAddonComponent implements OnInit {
 
   updatedPlanDetails() {
     this.addonService.editAddonPlan(this.id, this.updateplan).subscribe(data => {
-      console.log(data);
       alert("Updated Successfully...");
       this.goToAdminHomePage();
     }, error => console.log(error));

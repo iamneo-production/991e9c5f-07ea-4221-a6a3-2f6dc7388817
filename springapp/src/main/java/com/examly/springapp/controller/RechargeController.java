@@ -19,15 +19,16 @@ import com.examly.springapp.model.Message;
 import com.examly.springapp.service.RechargeService;
 
 @RestController
-@RequestMapping("/admin")
+@RequestMapping("api/admin")
 public class RechargeController {
 
 	@Autowired
 	private RechargeService rechargeService;
 	
 	@PostMapping("/recharge/{id}")
-	public ResponseEntity<?> addRecharge(@RequestBody Recharge recharge, @PathVariable Long id){
-		rechargeService.addRecharge(recharge,id);
+	public ResponseEntity<?> addRecharge(@PathVariable Long id, @RequestBody Recharge recharge){
+		System.out.println(id+"recharge id");
+		rechargeService.addRecharge(id,recharge);
 		return new ResponseEntity<>(new Message("recharge added successfully"), HttpStatus.CREATED);
 	}
 	
