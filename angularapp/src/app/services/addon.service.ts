@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class AddonService {addonurl="http://localhost:8081/api/admin/addon";
+export class AddonService {addonurl="https://8080-babdbceaaedaaecdababecfbdcbbefdaddee.project.examly.io/api/admin/addon";
 
 constructor(private httpClient: HttpClient) { }
 

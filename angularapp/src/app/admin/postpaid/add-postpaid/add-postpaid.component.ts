@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { PlanModel } from 'src/app/models/plan-model';
+import { Plan } from 'src/app/models/plan';
 import { PlanService } from 'src/app/services/plan.service';
 
 @Component({
@@ -14,7 +14,7 @@ export class AddPostpaidComponent implements OnInit {
 
   constructor(private planService: PlanService, private router: Router) { }
 
-  plans = new PlanModel();
+  plans = new Plan();
   validationForm: FormGroup;
 
   ngOnInit(): void {

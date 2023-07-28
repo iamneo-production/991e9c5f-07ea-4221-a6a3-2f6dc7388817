@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { PlanModel } from 'src/app/models/plan-model';
+import { Plan } from 'src/app/models/plan';
 import { PlanService } from 'src/app/services/plan.service';
 import { RechargeService } from 'src/app/services/recharge.service';
 @Component({
@@ -10,7 +10,7 @@ import { RechargeService } from 'src/app/services/recharge.service';
 })
 export class PopularPlansComponent implements OnInit {
 
-  allPlans: PlanModel[];
+  allPlans: Plan[];
   SearchText = '';
   constructor(private planService: PlanService, private router: Router,
               private rechargeService: RechargeService) { }
