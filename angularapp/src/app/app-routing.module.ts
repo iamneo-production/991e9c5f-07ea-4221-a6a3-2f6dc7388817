@@ -54,8 +54,10 @@ const routes: Routes = [
       { path: "viewRecharge", component: NotificationComponent },
       {path: "addReview", component: ReviewComponent}
     ],
+    
     // canActivate: [AuthGuard]9
-  }
+  },
+  {path: "addReview", component: ReviewComponent}
 ];
 
 @NgModule({
