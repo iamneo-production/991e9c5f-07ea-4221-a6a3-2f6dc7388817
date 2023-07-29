@@ -35,7 +35,15 @@ public class AddonController {
 		List<Addon> am = addonService.getAllAddon();
 		return new ResponseEntity<>(am,HttpStatus.OK);
 	}
-	
+	@GetMapping("/addon/{id}")
+    public ResponseEntity<Addon> getAddonById(@PathVariable("id") int id) {
+        Addon am = addonService.getAddonById(id);
+        if (am != null) {
+            return new ResponseEntity<>(am, HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+    }
 	@PutMapping("/addon/{id}")
 	public ResponseEntity<Addon> editAddon(@PathVariable("id") int id, @RequestBody Addon addon){
 		Addon am = addonService.getAddonById(id);

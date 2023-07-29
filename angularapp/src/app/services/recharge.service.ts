@@ -8,7 +8,7 @@ import { LoginService } from './login.service';
 })
 export class RechargeService {
     // private  baseUrl = "http://localhost:3000/recharge";
-    private  baseUrl = "http://localhost:8081/api/admin/recharge";
+    private  baseUrl = "https://8080-eeeabfbfadbabcbefbffdababecfbdcbbefdaddee.project.examly.io/admin/recharge";
 
   constructor(private httpClient: HttpClient,
     private loginService: LoginService) { }
@@ -18,6 +18,7 @@ export class RechargeService {
   userId: number = this.loginService.getUserId();
 
   addRecharge(recharge: RechargeModel): Observable<Object> {
+    console.log(recharge);
       return this.httpClient.post(`${this.baseUrl}/${this.userId}`, recharge);
   }
 

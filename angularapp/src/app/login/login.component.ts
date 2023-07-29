@@ -36,6 +36,7 @@ export class LoginComponent implements OnInit {
     this.loginservice.addLogin(this.login).subscribe(response => {
       // console.log(response);
       const data = response;
+      this.loginservice.setUserId(data.userId);
       this.isLoggedIn = data.success;
       this.authService.setIsLoggin(this.isLoggedIn);
       if (data.role.toLowerCase() == 'admin') {

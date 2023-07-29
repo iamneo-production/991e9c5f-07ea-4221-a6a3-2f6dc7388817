@@ -27,7 +27,6 @@ export class AddAddonComponent implements OnInit {
   }
 
   addUser() {
-    console.log(this.addplans)
     this.addonService.addAddonPlan(this.addplans).subscribe(data => {
       alert("Addon Data Added Successfull ...")
       this.goToAddonsList();
