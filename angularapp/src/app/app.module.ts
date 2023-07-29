@@ -23,6 +23,7 @@ import { RechargeDetailsComponent } from './user/recharge-details/recharge-detai
 import { ReviewComponent } from './user/review/review.component';
 import { UserNavbarComponent } from './user/user-navbar/user-navbar.component';
 import { AddonPlanComponent } from './admin/addon/addon-plan/addon-plan.component';
+import { ShowReviewComponent } from './user/review/show-review/show-review.component';
 
 
 @NgModule({
@@ -45,12 +46,14 @@ import { AddonPlanComponent } from './admin/addon/addon-plan/addon-plan.componen
     PopularPlansComponent,
     RechargeDetailsComponent,
     ReviewComponent,
-    UserNavbarComponent
+    UserNavbarComponent,
+    ShowReviewComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,ReactiveFormsModule,
+    FormsModule,
+    ReactiveFormsModule,
     HttpClientModule
   ],
   providers: [],
