@@ -7,41 +7,22 @@ import javax.persistence.*;
 public class Addon {
 
 	@Id
-<<<<<<< HEAD
-	@Column(name="addon_id")
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	private Integer id;
-	@Column(name="addon_name")
-	private String addonName;
-=======
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer id;
 	@Column(name="addon_name")
 	private String addonName;
 	@Column(name="addon_type")
 	private String addonType;
->>>>>>> b23a2efd038dcd365805cc7227f3c2d60229cd13
 	@Column(name="addon_price")
 	private Integer addonPrice;
 	@Column(name="addon_details")
 	private String addonDetails;
-<<<<<<< HEAD
-=======
 	@Column(name="addon_validity")
 	private String addonValidity;
->>>>>>> b23a2efd038dcd365805cc7227f3c2d60229cd13
 	
 	public Addon() {
 		
 	}
-<<<<<<< HEAD
-	public Addon(Integer id, String addonName, Integer addonPrice, String addonDetails) {
-		
-		this.id = id;
-		this.addonName = addonName;
-		this.addonPrice = addonPrice;
-		this.addonDetails = addonDetails;
-=======
 	public Addon(Integer id, String addonName, Integer addonPrice, String addonType, String addonValidity, String addonDetails) {
 		
 		this.id = id;
@@ -50,7 +31,6 @@ public class Addon {
 		this.addonPrice = addonPrice;
 		this.addonDetails = addonDetails;
 		this.addonValidity = addonValidity;
->>>>>>> b23a2efd038dcd365805cc7227f3c2d60229cd13
 	}
 	public Integer getAddonId() {
 		return id;
@@ -58,14 +38,6 @@ public class Addon {
 	public void setAddonId(Integer id) {
 		this.id = id;
 	}
-<<<<<<< HEAD
-	public String getAddonNanme() {
-		return addonName;
-	}
-	public void setAddonNanme(String addonName) {
-		this.addonName = addonName;
-	}
-=======
 	public String getAddonName() {
 		return addonName;
 	}
@@ -79,7 +51,6 @@ public class Addon {
 	public void setAddonType(String addonType) {
 		this.addonType = addonType;
 	}
->>>>>>> b23a2efd038dcd365805cc7227f3c2d60229cd13
 	public Integer getAddonPrice() {
 		return addonPrice;
 	}
@@ -91,10 +62,6 @@ public class Addon {
 	}
 	public void setAddonDetails(String addonDetails) {
 		this.addonDetails = addonDetails;
-<<<<<<< HEAD
-	}	
-	
-=======
 	}
 	public String getAddonValidity() {
 		return addonValidity;
@@ -104,5 +71,4 @@ public class Addon {
 	}	
 	
 	
->>>>>>> b23a2efd038dcd365805cc7227f3c2d60229cd13
 }
