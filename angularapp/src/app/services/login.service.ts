@@ -7,6 +7,9 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class LoginService {
+  getUserId(): number {
+    throw new Error('Method not implemented.');
+  }
   private loginurl = "http://localhost:8081/api/user/login";
   private registerurl="http://localhost:8081/api/user/signup";
 
