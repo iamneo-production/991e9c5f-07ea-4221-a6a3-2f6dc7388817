@@ -15,15 +15,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.examly.springapp.model.Addon;
 import com.examly.springapp.service.AddonService;
+import com.examly.springapp.repository.AddonRepository;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import java.util.Optional;
 
 @RestController
-@CrossOrigin(origins="*")
-@RequestMapping("/api/admin")
+@CrossOrigin(origins="https://8081-babdbceaaedaaecdababecfbdcbbefdaddee.project.examly.io")
+@RequestMapping("api/admin")
 public class AddonController {
 
 	@Autowired
 	private AddonService addonService;
+
+	@Autowired
+	private AddonRepository addonRepository;
 	
 	@PostMapping("/addon")
 	public ResponseEntity<Addon> addAddon(@RequestBody Addon addon){
@@ -34,6 +39,11 @@ public class AddonController {
 	public ResponseEntity<List<Addon>> getAllAddon(){
 		List<Addon> am = addonService.getAllAddon();
 		return new ResponseEntity<>(am,HttpStatus.OK);
+	}
+
+	@GetMapping("/addon/{id}")
+	public Optional<Addon> viewAddonDetails(@PathVariable("id") int id) {
+		return addonRepository.findById(id);
 	}
 	
 	@PutMapping("/addon/{id}")
