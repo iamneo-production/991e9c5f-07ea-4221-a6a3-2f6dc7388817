@@ -8,7 +8,7 @@ import { LoginService } from './login.service';
 })
 export class RechargeService {
     // private  baseUrl = "http://localhost:3000/recharge";
-    private  baseUrl = "http://localhost:8081/api/admin/recharge";
+    private  baseUrl = "https://8080-babdbceaaedaaecdababecfbdcbbefdaddee.project.examly.io/admin/recharge";
 
   constructor(private httpClient: HttpClient,
     private loginService: LoginService) { }

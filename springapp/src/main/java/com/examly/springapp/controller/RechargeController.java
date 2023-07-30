@@ -13,12 +13,13 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
+import org.springframework.web.bind.annotation.CrossOrigin;
 import com.examly.springapp.model.Recharge;
 import com.examly.springapp.model.Message;
 import com.examly.springapp.service.RechargeService;
 
 @RestController
+@CrossOrigin(origins = "*", allowedHeaders="*")
 @RequestMapping("/admin")
 public class RechargeController {
 
