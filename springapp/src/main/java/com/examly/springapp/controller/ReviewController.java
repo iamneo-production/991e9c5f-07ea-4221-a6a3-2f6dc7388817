@@ -32,5 +32,4 @@ public class ReviewController {
 	ResponseEntity<List<Review>> getAllReviews(){
 		return new ResponseEntity<> (reviewService.getAllReviews(), HttpStatus.OK);
 	}
-
 }

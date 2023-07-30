@@ -1,15 +1,10 @@
 package com.examly.springapp.model;
 
-
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name="review_model")
-public class Reviews {
+public class Review {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
@@ -18,11 +13,10 @@ public class Reviews {
 	private String review;
 	private Integer rating;
 	
-	public Reviews() {
+	public Review() {
 		
 	}
-	public Reviews(Integer id, String username, String review, Integer rating) {
-		super();
+	public Review(Integer id, String username, String review, Integer rating) {
 		this.id = id;
 		this.username = username;
 		this.review = review;
