@@ -9,7 +9,7 @@ import { Plan } from '../models/plan';
 export class PlanService {
 
     // private baseUrl="http://localhost:3000/planModel";
-    private baseUrl="https://8080-eeeabfbfadbabcbefbffdababecfbdcbbefdaddee.project.examly.io/admin/plan";
+    private baseUrl="https://8080-eabbdcbebcdababecfbdcbbefdaddee.project.examly.io/admin/plan";
     constructor(private httpClient: HttpClient) { }
   
     getAllPlans(): Observable<Plan[]>{
