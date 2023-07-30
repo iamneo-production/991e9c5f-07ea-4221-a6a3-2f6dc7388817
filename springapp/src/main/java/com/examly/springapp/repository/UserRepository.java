@@ -1,4 +1,3 @@
-
 package com.examly.springapp.repository;
 
 import java.util.Optional;

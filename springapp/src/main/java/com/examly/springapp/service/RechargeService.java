@@ -1,30 +1,34 @@
 package com.examly.springapp.service;
 
 import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.examly.springapp.model.Recharge;
 import com.examly.springapp.repository.RechargeRepository;
+import com.examly.springapp.repository.UserRepository;
+import com.examly.springapp.model.User;
 
 @Service
 public class RechargeService {
 
-	@Autowired
+    @Autowired
 	private RechargeRepository rechargeRepo;
 	
-	public Recharge addRecharge(Recharge recharge) {
-		return rechargeRepo.save(recharge);
+	@Autowired
+	private UserRepository userRepository;
+	
+	public void addRecharge(Long id, Recharge recharge) {
+		 User user = userRepository.findById(id).orElse(null);
+	     recharge.setUser(user);
+	     rechargeRepo.save(recharge);
 	}
 	
-	public List<Recharge> getRecharge(){
-		return rechargeRepo.findAll();
+	public List<Recharge> getRecharge(Long id){
+		return rechargeRepo.findByUserId(id);
 	}
 	
-	public Recharge getRechargeById(int id) {
+	public Recharge getRechargeById(Long id) {
 		return rechargeRepo.findById(id).get();
 	}
-	
-	
 }

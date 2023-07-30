@@ -1,4 +1,4 @@
-package main.java.com.examly.springapp.controller;
+package com.examly.springapp.controller;
 
 import java.util.List;
 
@@ -13,12 +13,13 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
 import com.examly.springapp.model.Addon;
 import com.examly.springapp.service.AddonService;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 @RestController
-@RequestMapping("/admin")
+@CrossOrigin(origins="*")
+@RequestMapping("/api/admin")
 public class AddonController {
 
 	@Autowired
@@ -34,14 +35,24 @@ public class AddonController {
 		List<Addon> am = addonService.getAllAddon();
 		return new ResponseEntity<>(am,HttpStatus.OK);
 	}
-	
+	@GetMapping("/addon/{id}")
+    public ResponseEntity<Addon> getAddonById(@PathVariable("id") int id) {
+        Addon am = addonService.getAddonById(id);
+        if (am != null) {
+            return new ResponseEntity<>(am, HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+    }
 	@PutMapping("/addon/{id}")
 	public ResponseEntity<Addon> editAddon(@PathVariable("id") int id, @RequestBody Addon addon){
 		Addon am = addonService.getAddonById(id);
 		if(am!=null) {
-			am.setAddonNanme(addon.getAddonNanme());
+			am.setAddonName(addon.getAddonName());
+			am.setAddonType(addon.getAddonType());
 			am.setAddonPrice(addon.getAddonPrice());
 			am.setAddonDetails(addon.getAddonDetails());
+			am.setAddonValidity(addon.getAddonValidity());
 			addonService.updateAddon(am);
 			return new ResponseEntity<>(am, HttpStatus.OK);
 		}else{
