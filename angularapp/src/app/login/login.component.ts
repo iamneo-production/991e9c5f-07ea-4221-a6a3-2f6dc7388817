@@ -34,15 +34,6 @@ export class LoginComponent implements OnInit {
   logindata() {
 
     this.loginservice.addLogin(this.login).subscribe(response => {
-<<<<<<< HEAD
-      const data = response;
-      this.isLoggedIn = data.success;
-      this.authService.setIsLoggin(this.isLoggedIn);
-      if (data.role == 'admin') {
-        this.router.navigate(['/admin']);
-      }
-      if (data.role == 'user') {
-=======
       // console.log(response);
       const data = response;
       this.loginservice.setUserId(data.userId);
@@ -52,7 +43,6 @@ export class LoginComponent implements OnInit {
         this.router.navigate(['admin']);
       }
       if (data.role.toLowerCase() == 'user') {
->>>>>>> b23a2efd038dcd365805cc7227f3c2d60229cd13
         this.router.navigate(['user']);
       }
 

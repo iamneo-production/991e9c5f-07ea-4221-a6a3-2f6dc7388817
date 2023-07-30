@@ -16,13 +16,9 @@ export class UpdateAddonComponent implements OnInit {
   updateplan: Addon = new Addon();
   validationForm: FormGroup;
 
-<<<<<<< HEAD
-  constructor(private addonService: AddonService, private router: Router, private route: ActivatedRoute) { }
-=======
   constructor(private addonService: AddonService, 
     private router: Router, 
     private route: ActivatedRoute) { }
->>>>>>> b23a2efd038dcd365805cc7227f3c2d60229cd13
 
   ngOnInit(): void {
 
@@ -35,10 +31,6 @@ export class UpdateAddonComponent implements OnInit {
     })
 
     this.id = this.route.snapshot.params['id'];
-<<<<<<< HEAD
-
-=======
->>>>>>> b23a2efd038dcd365805cc7227f3c2d60229cd13
     this.addonService.getAddonPlanById(this.id).subscribe(data => {
       this.updateplan = data;
     }, error => console.log(error));
