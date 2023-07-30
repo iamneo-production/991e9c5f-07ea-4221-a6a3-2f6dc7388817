@@ -34,13 +34,14 @@ export class LoginComponent implements OnInit {
   logindata() {
 
     this.loginservice.addLogin(this.login).subscribe(response => {
+      // console.log(response);
       const data = response;
       this.isLoggedIn = data.success;
       this.authService.setIsLoggin(this.isLoggedIn);
-      if (data.role == 'admin') {
-        this.router.navigate(['/admin']);
+      if (data.role.toLowerCase() == 'admin') {
+        this.router.navigate(['admin']);
       }
-      if (data.role == 'user') {
+      if (data.role.toLowerCase() == 'user') {
         this.router.navigate(['user']);
       }
 
