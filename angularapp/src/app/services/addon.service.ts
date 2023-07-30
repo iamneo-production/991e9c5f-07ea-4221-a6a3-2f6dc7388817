@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class AddonService {
-  addonurl="https://8080-eeeabfbfadbabcbefbffdababecfbdcbbefdaddee.project.examly.io/api/admin/addon";
+  addonurl="https://8080-bdfdaedcfbcfecedababecfbdcbbefdaddee.project.examly.io//api/admin/addon";
 
 constructor(private httpClient: HttpClient) { }
 
