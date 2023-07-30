@@ -1,0 +1,45 @@
+.greater-than {
+    cursor: pointer;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: right;
+  }
+  .card-container{
+    border-left: 10px solid blue;
+    padding: 5px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+  }
+  .b1{
+  margin-right: 90%;
+  }
+  .vertical-line {
+  border-left: 3px solid black;
+  height: 65px;
+  }
+  .currency-rupee {
+  padding: 25px;
+  font-size:20px
+  }
+  .data-info {
+  text-align: center;
+  }
+  .validity-info {
+  text-align: center;
+  }
+  .desc {
+  line-height: 0.8;
+  }
+  .color-change {
+  border-left: 10px solid red;
+  }
+  
+  .search-box {
+    margin: 20px auto;
+    text-align: center;
+  }
+
+  .search-box input {
+    border-radius: 5px;
+    padding: 10px;
+  }
