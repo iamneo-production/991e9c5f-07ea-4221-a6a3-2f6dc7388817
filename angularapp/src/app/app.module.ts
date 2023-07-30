@@ -10,10 +10,6 @@ import { PrepaidPlanComponent } from './admin/prepaid/prepaid-plan/prepaid-plan.
 import { AddPrepaidComponent } from './admin/prepaid/add-prepaid/add-prepaid.component';
 import { UpdatePrepaidComponent } from './admin/prepaid/update-prepaid/update-prepaid.component';
 import { AdminNavbarComponent } from './admin/admin-navbar/admin-navbar.component';
-import { AddPostpaidComponent } from './admin/postpaid/add-postpaid/add-postpaid.component';
-import { PostpaidPlanComponent } from './admin/postpaid/postpaid-plan/postpaid-plan.component';
-import { UpdatePostpaidComponent } from './admin/postpaid/update-postpaid/update-postpaid.component';
-import { SearchPipe } from './services/search.pipe';
 
 
 @NgModule({
@@ -23,10 +19,6 @@ import { SearchPipe } from './services/search.pipe';
     AddPrepaidComponent,
     UpdatePrepaidComponent,
     AdminNavbarComponent,
-    AddPostpaidComponent,
-    PostpaidPlanComponent,
-    UpdatePostpaidComponent,
-    SearchPipe,
   ],
   imports: [
     BrowserModule,
