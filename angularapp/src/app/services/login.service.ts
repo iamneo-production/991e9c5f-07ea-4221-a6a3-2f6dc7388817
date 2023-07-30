@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class LoginService {
   private loginurl = "https://8080-bdfdaedcfbcfecedababecfbdcbbefdaddee.project.examly.io/api/user/login";
-  private registerurl="https://8080-bdfdaedcfbcfecedababecfbdcbbefdaddee.project.examly.io//api/user/signup";
+  private registerurl="https://8080-bdfdaedcfbcfecedababecfbdcbbefdaddee.project.examly.io/api/user/signup";
   
    constructor(private httpClient: HttpClient) { }
    userId: number;
