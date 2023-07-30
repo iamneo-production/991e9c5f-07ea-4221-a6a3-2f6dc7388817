@@ -18,7 +18,7 @@ public class RechargeService {
 	@Autowired
 	private UserRepository userRepository;
 	
-	public void addRecharge(Recharge recharge, Long id) {
+	public void addRecharge(Long id, Recharge recharge) {
 		 User user = userRepository.findById(id).orElse(null);
 	     recharge.setUser(user);
 	     rechargeRepo.save(recharge);
