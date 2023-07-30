@@ -11,7 +11,6 @@ import { UpdatePrepaidComponent } from './admin/prepaid/update-prepaid/update-pr
 import { AdminNavbarComponent } from './admin/admin-navbar/admin-navbar.component';
 import { AddAddonComponent } from './admin/addon/add-addon/add-addon.component';
 import { UpdateAddonComponent } from './admin/addon/update-addon/update-addon.component';
-import { AddonComponent } from './admin/addon/addon.component';
 import { AddPostpaidComponent } from './admin/postpaid/add-postpaid/add-postpaid.component';
 import { UpdatePostpaidComponent } from './admin/postpaid/update-postpaid/update-postpaid.component';
 import { PostpaidPlanComponent } from './admin/postpaid/postpaid-plan/postpaid-plan.component';
@@ -23,6 +22,8 @@ import { PopularPlansComponent } from './user/popular-plans/popular-plans.compon
 import { RechargeDetailsComponent } from './user/recharge-details/recharge-details.component';
 import { ReviewComponent } from './user/review/review.component';
 import { UserNavbarComponent } from './user/user-navbar/user-navbar.component';
+import { AddonPlanComponent } from './admin/addon/addon-plan/addon-plan.component';
+import { ShowReviewComponent } from './user/review/show-review/show-review.component';
 
 
 @NgModule({
@@ -34,7 +35,7 @@ import { UserNavbarComponent } from './user/user-navbar/user-navbar.component';
     AdminNavbarComponent,
     AddAddonComponent,
     UpdateAddonComponent,
-    AddonComponent,
+    AddonPlanComponent,
     AddPostpaidComponent,
     UpdatePostpaidComponent,
     PostpaidPlanComponent,
@@ -45,12 +46,14 @@ import { UserNavbarComponent } from './user/user-navbar/user-navbar.component';
     PopularPlansComponent,
     RechargeDetailsComponent,
     ReviewComponent,
-    UserNavbarComponent
+    UserNavbarComponent,
+    ShowReviewComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,ReactiveFormsModule,
+    FormsModule,
+    ReactiveFormsModule,
     HttpClientModule
   ],
   providers: [],

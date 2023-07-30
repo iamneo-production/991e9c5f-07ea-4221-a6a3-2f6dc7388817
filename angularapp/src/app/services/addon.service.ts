@@ -6,7 +6,8 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class AddonService {addonurl="http://localhost:8081/api/admin/addon";
+export class AddonService {
+  addonurl="https://8080-bafdbdecabebcdababecfbdcbbefdaddee.project.examly.io/api/admin/addon";
 
 constructor(private httpClient: HttpClient) { }
 
@@ -19,6 +20,7 @@ addAddonPlan(addon: Addon): Observable<Object>{
 }
 
 getAddonPlanById(id: number): Observable<Addon>{
+  console.log(id);
   return this.httpClient.get<Addon>(`${this.addonurl}/${id}`);
 }
 
