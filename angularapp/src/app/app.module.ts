@@ -52,7 +52,8 @@ import { ShowReviewComponent } from './user/review/show-review/show-review.compo
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,ReactiveFormsModule,
+    FormsModule,
+    ReactiveFormsModule,
     HttpClientModule
   ],
   providers: [],

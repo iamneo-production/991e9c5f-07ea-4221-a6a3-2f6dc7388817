@@ -1,11 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
-<<<<<<< HEAD
-import { PlanModel } from 'src/app/models/plan-model';
-=======
 import { Plan } from 'src/app/models/plan';
->>>>>>> b23a2efd038dcd365805cc7227f3c2d60229cd13
 import { PlanService } from 'src/app/services/plan.service';
 
 @Component({
@@ -16,11 +12,7 @@ import { PlanService } from 'src/app/services/plan.service';
 export class UpdatePostpaidComponent implements OnInit {
 
   id: number;
-<<<<<<< HEAD
-  postpaid = new PlanModel();
-=======
   postpaid = new Plan();
->>>>>>> b23a2efd038dcd365805cc7227f3c2d60229cd13
   validationForm: FormGroup;
 
   constructor(private planService: PlanService, private router: Router, private route: ActivatedRoute) { }
