@@ -1,7 +1,7 @@
 <div class="search-box">
     <input placeholder="Type here to search plans" [(ngModel)]="SearchText" name="SearchText">
   </div>
-  <div class="container" *ngFor="let plan of allPlans | search: SearchText; let i=index">
+  <div class="container" *ngFor="let plan of allPlans; let i=index">
       <div class="card card-container col-md-10 d-flex justify-content-between" [ngClass]="{'color-change': i%2!==0}">
         <span class="badge text-bg-dark b1">{{ plan.planType }}</span>
         <div class="row">
@@ -13,7 +13,7 @@
           <div class=" col-md-1 vertical-line"></div>
           <div class="col-md-3 data-info">
             <p>Data :</p>
-            <p>{{ plan.planDescription }} (10MBPS)</p>
+            <p>{{ plan.planDetails }} (10MBPS)</p>
           </div>
           <div class="col-md-3 validity-info">
             <p>validity :</p>
@@ -24,7 +24,7 @@
           </div>
         </div>
         <div class="row desc">
-          <p>Data: {{ plan.planDescription }}</p>
+          <p>Data: {{ plan.planDetails }}</p>
           <p>Speed: 10(MBPS)</p>
           <p>Offer : {{ plan.planOffers}} upto Rs.200 casback</p>
         </div>

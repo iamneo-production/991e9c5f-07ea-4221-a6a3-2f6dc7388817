@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { PlanModel } from 'src/app/models/plan-model';
+import { Plan } from 'src/app/models/plan';
 import { PlanService } from 'src/app/services/plan.service';
 @Component({
   selector: 'app-postpaid-plan',
@@ -11,7 +11,7 @@ export class PostpaidPlanComponent implements OnInit {
 
   constructor(private planService: PlanService, private router: Router) { }
 
-  allPlans: PlanModel[];
+  allPlans: Plan[];
   SearchText =  '';
 
   ngOnInit(): void {

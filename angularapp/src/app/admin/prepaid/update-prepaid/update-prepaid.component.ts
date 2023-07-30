@@ -45,13 +45,11 @@ export class UpdatePrepaidComponent implements OnInit {
 
   validate: string = "prepaid";
   onSubmit() {
-    // console.log(this.prepaid);
     if (this.prepaid.planType.toLowerCase() == this.validate) {
       this.updatePlan();
     } else {
       alert("Enter only prepaid plan details . . .");
     }
-    // this.addUser();
   }
 
   goToPrepaidList() {
