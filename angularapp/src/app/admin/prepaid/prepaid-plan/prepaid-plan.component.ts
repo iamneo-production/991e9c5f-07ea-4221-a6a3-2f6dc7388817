@@ -24,7 +24,6 @@ export class PrepaidPlanComponent implements OnInit {
     this.planService.getAllPlans().subscribe((data)=>{
       const prepaid = data.filter(plan => plan.planType.toLowerCase()==='prepaid');
       this.allPlans=prepaid;
-      // console.log(this.allPlans);
     });
   }
 

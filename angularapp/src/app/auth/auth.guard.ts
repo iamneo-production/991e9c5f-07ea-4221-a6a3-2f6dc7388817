@@ -6,6 +6,7 @@ import { AuthService } from '../services/auth.service';
   providedIn: 'root'
 })
 export class AuthGuard implements CanActivate {
+<<<<<<< HEAD
   canActivate(){
     const authService = inject(AuthService);
     const router = inject(Router);
@@ -16,5 +17,16 @@ export class AuthGuard implements CanActivate {
         router.navigate(["login"]);
       }
       return false; 
+=======
+  constructor(private router: Router, private authService: AuthService) { }
+
+  canActivate(): boolean {
+    if (this.authService.getIsLoggin()) {
+      return true;
+    } else {
+      this.router.navigate(["login"]);
+      return false;
+    }
+>>>>>>> b23a2efd038dcd365805cc7227f3c2d60229cd13
   }
 }

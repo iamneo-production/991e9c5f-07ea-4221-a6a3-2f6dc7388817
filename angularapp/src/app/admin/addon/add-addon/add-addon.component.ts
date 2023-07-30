@@ -9,7 +9,13 @@ import { AddonService } from 'src/app/services/addon.service';
   templateUrl: './add-addon.component.html',
   styleUrls: ['./add-addon.component.css']
 })
+<<<<<<< HEAD
 export class AddAddonComponent implements OnInit {addplans: Addon = new Addon();
+=======
+export class AddAddonComponent implements OnInit {
+  
+  addplans: Addon = new Addon();
+>>>>>>> b23a2efd038dcd365805cc7227f3c2d60229cd13
   validationForm: FormGroup;
 
   constructor(private addonService: AddonService, private router: Router) { }

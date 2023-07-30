@@ -40,9 +40,16 @@ const routes: Routes = [
       { path: 'addAddon', component: AddAddonComponent },
       { path: 'editAddon/:id', component: UpdateAddonComponent }
     ],
+<<<<<<< HEAD
     // canActivate: [AuthGuard]
   },
   {
+=======
+    canActivate: [AuthGuard]
+  },
+  {
+    
+>>>>>>> b23a2efd038dcd365805cc7227f3c2d60229cd13
     path: "user", component: UserNavbarComponent,
     children: [
       { path: '', redirectTo: 'popularPlans', pathMatch: 'full' },
@@ -54,7 +61,11 @@ const routes: Routes = [
       { path: "viewRecharge", component: NotificationComponent },
       {path: "addReview", component: ReviewComponent}
     ],
+<<<<<<< HEAD
     // canActivate: [AuthGuard]9
+=======
+    canActivate: [AuthGuard]
+>>>>>>> b23a2efd038dcd365805cc7227f3c2d60229cd13
   }
 ];
 

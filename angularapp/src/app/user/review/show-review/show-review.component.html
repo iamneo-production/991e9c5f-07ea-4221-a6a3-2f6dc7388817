@@ -1,10 +1,19 @@
+<<<<<<< HEAD
 <div class="card" style="margin-top: 20px; margin-bottom: 5px; background-color: whitesmoke;" *ngFor="let review of reviews">
+=======
+<<ng-container *ngFor="let review of reviews">
+<div class="card" style="margin-top: 20px; margin-bottom: 5px; background-color: whitesmoke;">
+>>>>>>> b23a2efd038dcd365805cc7227f3c2d60229cd13
     <div class="card-body">
       <div class="content-container">
         <div class="data-container">
           <p class="card-text">user Name: {{ review.username }}</p>
           <p class="card-text">Rating: <span *ngFor="let star of stars; let i = index">
+<<<<<<< HEAD
             <i class="fas fa-star" [style.color]="i < review.rating ? 'orange' : ''"></i>
+=======
+            <em class="fas fa-star" [style.color]="i < review.rating ? 'orange' : ''"></em>
+>>>>>>> b23a2efd038dcd365805cc7227f3c2d60229cd13
           </span>
         </p>
           <p class="card-text">Review: {{ review.review }}</p>
@@ -12,5 +21,9 @@
       </div>
     </div>
   </div>
+<<<<<<< HEAD
   
+=======
+</ng-container>
+>>>>>>> b23a2efd038dcd365805cc7227f3c2d60229cd13
   

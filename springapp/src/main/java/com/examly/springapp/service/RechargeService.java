@@ -18,7 +18,11 @@ public class RechargeService {
 	@Autowired
 	private UserRepository userRepository;
 	
+<<<<<<< HEAD
 	public void addRecharge(Recharge recharge, Long id) {
+=======
+	public void addRecharge(Long id, Recharge recharge) {
+>>>>>>> b23a2efd038dcd365805cc7227f3c2d60229cd13
 		 User user = userRepository.findById(id).orElse(null);
 	     recharge.setUser(user);
 	     rechargeRepo.save(recharge);

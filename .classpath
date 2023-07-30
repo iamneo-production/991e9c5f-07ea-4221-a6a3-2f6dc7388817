@@ -67,6 +67,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+>>>>>>> 874f18bccd1e417f5baeaef62bc5a0bc866d1a3c
 	<classpathentry excluding="**" kind="src" output="target/classes" path="src/main/resources">
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>
@@ -80,6 +81,8 @@
 			<attribute name="optional" value="true"/>
 		</attributes>
 	</classpathentry>
+<<<<<<< HEAD
+=======
 >>>>>>> NetFi_Portal-Shankar1307
 =======
 >>>>>>> 00d27c0611ab8a38dbc5bc95e7e6fef295d3215f

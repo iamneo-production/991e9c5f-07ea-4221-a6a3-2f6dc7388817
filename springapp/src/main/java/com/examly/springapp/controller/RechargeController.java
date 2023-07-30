@@ -13,21 +13,36 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+<<<<<<< HEAD
+=======
+import org.springframework.web.bind.annotation.CrossOrigin;
+>>>>>>> b23a2efd038dcd365805cc7227f3c2d60229cd13
 
 import com.examly.springapp.model.Recharge;
 import com.examly.springapp.model.Message;
 import com.examly.springapp.service.RechargeService;
 
 @RestController
+<<<<<<< HEAD
 @RequestMapping("/admin")
+=======
+@CrossOrigin(origins="*")
+@RequestMapping("admin")
+>>>>>>> b23a2efd038dcd365805cc7227f3c2d60229cd13
 public class RechargeController {
 
 	@Autowired
 	private RechargeService rechargeService;
 	
 	@PostMapping("/recharge/{id}")
+<<<<<<< HEAD
 	public ResponseEntity<?> addRecharge(@RequestBody Recharge recharge, @PathVariable Long id){
 		rechargeService.addRecharge(recharge,id);
+=======
+	public ResponseEntity<?> addRecharge(@PathVariable Long id, @RequestBody Recharge recharge){
+		// System.out.println(id+"recharge id");
+		rechargeService.addRecharge(id,recharge);
+>>>>>>> b23a2efd038dcd365805cc7227f3c2d60229cd13
 		return new ResponseEntity<>(new Message("recharge added successfully"), HttpStatus.CREATED);
 	}
 	
