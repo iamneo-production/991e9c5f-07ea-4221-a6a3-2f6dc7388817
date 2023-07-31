@@ -31,4 +31,8 @@ public class RechargeService {
 	public Recharge getRechargeById(Long id) {
 		return rechargeRepo.findById(id).get();
 	}
+
+	public List<Recharge> getAllRecharges(){
+		return rechargeRepo.findAll();
+	}
 }

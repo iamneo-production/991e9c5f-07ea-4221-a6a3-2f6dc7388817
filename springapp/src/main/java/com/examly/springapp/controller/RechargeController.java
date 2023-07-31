@@ -21,11 +21,16 @@ import com.examly.springapp.service.RechargeService;
 
 @RestController
 @CrossOrigin(origins="*")
-@RequestMapping("admin")
+@RequestMapping("/admin")
 public class RechargeController {
 
 	@Autowired
 	private RechargeService rechargeService;
+
+	@GetMapping("/recharge")
+	public ResponseEntity<?> getAllRecharges(){
+		return new ResponseEntity<> (rechargeService.getAllRecharges(), HttpStatus.OK);
+	}
 	
 	@PostMapping("/recharge/{id}")
 	public ResponseEntity<?> addRecharge(@PathVariable Long id, @RequestBody Recharge recharge){

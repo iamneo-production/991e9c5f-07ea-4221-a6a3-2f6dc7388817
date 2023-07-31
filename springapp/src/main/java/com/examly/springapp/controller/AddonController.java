@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 
 @RestController
 @CrossOrigin(origins="*")
-@RequestMapping("/api/admin")
+@RequestMapping("/admin")
 public class AddonController {
 
 	@Autowired
