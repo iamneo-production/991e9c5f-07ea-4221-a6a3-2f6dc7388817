@@ -1,26 +1,45 @@
 <form [formGroup]="validationForm">
 
     <div class="container">
+      
       <div class="form-group">
+        
         <input type="text" style="height: 50px;" class="form-control" autocomplete="off" [(ngModel)]="plans.planName"
           formControlName="planName" name="planName" id="planName" placeholder="Enter Plan Name">
+        
         <span class="help-block" *ngIf="!validationForm.get('planName').valid && validationForm.get('planName').touched"
           style="color: red;">Please enter valid name !</span>
       </div><br>
+      
       <div class="form-group">
         <input type="text" style="height: 50px;" class="form-control" autocomplete="off" [(ngModel)]="plans.planType"
           formControlName="planType" name="planType" id="planType" placeholder="Enter Plan Type">
+        
         <span class="help-block" *ngIf="!validationForm.get('planType').valid && validationForm.get('planType').touched"
+<<<<<<< HEAD
           style="color: red;">Please enter valid type !</span>
+=======
+          >Please enter valid type !</span>
+        
+>>>>>>> a20c35220427166242fbecf9b4fec57e158070e5
       </div><br>
+      
       <div class="form-group">
         <input type="text" style="height: 50px;" class="form-control" autocomplete="off" [(ngModel)]="plans.planValidity"
           formControlName="planValidity" name="planValidity" id="planValidity" placeholder="Enter Plan Validity">
+        
         <span class="help-block"
           *ngIf="!validationForm.get('planValidity').valid && validationForm.get('planValidity').touched"
+<<<<<<< HEAD
           style="color: red;">Please enter plan validity !</span>
+=======
+          >Please enter plan validity !</span>
+        
+>>>>>>> a20c35220427166242fbecf9b4fec57e158070e5
       </div><br>
     </div>
+
+
   
     <div class="division">
       <div class="form-group">

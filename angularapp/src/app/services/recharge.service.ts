@@ -7,8 +7,12 @@ import { LoginService } from './login.service';
   providedIn: 'root'
 })
 export class RechargeService {
+<<<<<<< HEAD
     // private  baseUrl = "http://localhost:3000/recharge";
     private  baseUrl = "https://8080-efececbdfeadbdababecfbdcbbefdaddee.project.examly.io/admin/recharge";
+=======
+    private  baseUrl = "http://localhost:8081/api/admin/recharge";
+>>>>>>> a20c35220427166242fbecf9b4fec57e158070e5
 
   constructor(private httpClient: HttpClient,
     private loginService: LoginService) { }
