@@ -1,0 +1,46 @@
+<form [formGroup]="validationForm">
+    <div class="container">
+      <div class="form-group">
+        <input type="text" style="height: 50px;" class="form-control" autocomplete="off" [(ngModel)]="addplans.addonName"
+          formControlName="addonName" name="addonName" id="addonName" placeholder="Enter Plan Name">
+        <span class="help-block" *ngIf="!validationForm.get('addonName').valid && validationForm.get('addonName').touched"
+          style="color: red;">Please enter valid name !</span>
+      </div><br>
+      <div class="form-group">
+        <input type="text" style="height: 50px;" class="form-control" autocomplete="off" [(ngModel)]="addplans.addonType"
+          formControlName="addonType" name="addonType" id="addonType" placeholder="Enter Plan Type">
+        <span class="help-block" *ngIf="!validationForm.get('addonType').valid && validationForm.get('addonType').touched"
+          style="color: red;">Please enter valid type !</span>
+      </div><br>
+      <div class="form-group">
+        <input type="text" style="height: 50px;" class="form-control" autocomplete="off"
+          [(ngModel)]="addplans.addonValidity" formControlName="addonValidity" name="addonValidity" id="addonValidity"
+          placeholder="Enter Plan Validity">
+        <span class="help-block"
+          *ngIf="!validationForm.get('addonValidity').valid && validationForm.get('addonValidity').touched"
+          style="color: red;">Please enter plan validity !</span>
+      </div><br>
+    </div>
+  
+    <div class="division">
+      <div class="form-group">
+        <input type="text" style="height: 50px;" class="form-control" autocomplete="off" [(ngModel)]="addplans.addonPrice"
+          formControlName="addonPrice" name="addonPrice" id="addonPrice" placeholder="Enter Plan Price">
+        <span class="help-block"
+          *ngIf="!validationForm.get('addonPrice').valid && validationForm.get('addonPrice').touched"
+          style="color: red;">Please enter valid price !</span>
+      </div><br>
+      <div class="form-group">
+        <input type="text" style="height: 150px; text-align: center;" class="form-control" autocomplete="off"
+          [(ngModel)]="addplans.addonDetails" formControlName="addonDetails" name="addonDetails" id="addonDetails"
+          placeholder="Enter Plan Description">
+        <span class="help-block"
+          *ngIf="!validationForm.get('addonDetails').valid && validationForm.get('addonDetails').touched"
+          style="color: red;">Please enter valid description !</span>
+      </div>
+    </div>
+  
+    <button type="submit" (click)="onSubmit()" [disabled]="!validationForm.valid"
+      style="background-color: brown; margin-left: 650px; " class="btn btn-danger">Add Plan</button>
+  
+  </form>

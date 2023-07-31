@@ -1,0 +1,32 @@
+
+<nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+    <div class="container-fluid">
+        <a class="navbar-brand netfi-text" >NetFi</a>
+        <ul  class="navbar-nav mx-auto first-nav">
+            <li class="nav-item ">
+                <a class="nav-link" routerLink="popularPlans" routerLinkActive="active" >Popular plans</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="addons" routerLinkActive="active">Addons</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="notification" routerLinkActive="active">Notification<span class="bi bi-bell-fill"></span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="reviews" routerLinkActive="active">Reviews</a>
+            </li>
+            <!-- <li class="nav-item ml-sm-auto">
+                <button class="nav-link" (click)="logout()">Logout</button>
+            </li> -->
+        </ul>
+        <ul class="navbar-nav ml-auto second-nav">
+            <li class="nav-item">
+                <button class="nav-link btn btn-warning " style="color: white;" (click)="logout()">Logout</button>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container">
+    <router-outlet></router-outlet>
+</div>

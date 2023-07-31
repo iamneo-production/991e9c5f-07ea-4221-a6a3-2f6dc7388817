@@ -1,0 +1,17 @@
+<<ng-container *ngFor="let review of reviews">
+<div class="card" style="margin-top: 20px; margin-bottom: 5px; background-color: whitesmoke;">
+    <div class="card-body">
+      <div class="content-container">
+        <div class="data-container">
+          <p class="card-text">user Name: {{ review.username }}</p>
+          <p class="card-text">Rating: <span *ngFor="let star of stars; let i = index">
+            <em class="fas fa-star" [style.color]="i < review.rating ? 'orange' : ''"></em>
+          </span>
+        </p>
+          <p class="card-text">Review: {{ review.review }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>
+  
